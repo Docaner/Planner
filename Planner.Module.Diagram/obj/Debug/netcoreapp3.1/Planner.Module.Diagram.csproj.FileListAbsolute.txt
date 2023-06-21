@@ -50,3 +50,4 @@ D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netc
 D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.dll
 D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.pdb
 D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.genruntimeconfig.cache
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs

@@ -4,12 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Planner.Module.Diagram.Views"
+             xmlns:md="clr-namespace:Planner.Module.Diagram.Models"
+             xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.075*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <TextBlock Text="{Binding Header}" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock.LayoutTransform>
@@ -17,8 +19,11 @@
             </TextBlock.LayoutTransform>
         </TextBlock>
         <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
-            <Canvas Width="2000px">
-                <Line X1="0" Y1="20" X2="2000" Y2="20" Stroke="Black" StrokeThickness="2"/>
+            <Canvas Width="{Binding CanvasWidth}">
+                <behaviors:Interaction.Behaviors>
+                    <md:BindingToReadOnlyPropertyBehavior Target="{Binding CanvasHeight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Property="ActualHeight"/>
+                </behaviors:Interaction.Behaviors>
+                <Line X1="0" Y1="{Binding LineY}" X2="{Binding CanvasWidth}" Y2="{Binding LineY}" Stroke="Black" StrokeThickness="2"/>
             </Canvas>
         </ScrollViewer>
         

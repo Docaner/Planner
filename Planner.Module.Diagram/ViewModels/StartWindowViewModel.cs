@@ -8,32 +8,50 @@ namespace Planner.Module.Diagram.ViewModels
 {
     public class StartWindowViewModel : BindableBase
     {
-        private String _header;
-        public String Header
+        private string _header;
+        public string Header
         {
             get => _header;
             set => SetProperty(ref _header, value);
         }
 
-        private int _windowHeight;
-        public int WindowHeight
+        void RefreshHeader() => Header = "Всем привет! Это ПЛАНИРОВЩИК!" + CanvasHeight + " and " + CanvasWidth;
+
+        private Double _canvasHeight;
+        public Double CanvasHeight
         {
-            get => _windowHeight;
-            set => SetProperty(ref _windowHeight, value);
+            get => _canvasHeight;
+            set
+            {
+                SetProperty(ref _canvasHeight, value);
+                RefreshHeader();
+                LineY = value - 20.0;
+            }
         }
 
-        private int _windowWidth;
-        public int WindowWidth
+        private Double _canvasWidth;
+        public Double CanvasWidth
         {
-            get => _windowWidth;
-            set => SetProperty(ref _windowWidth, value);
+            get => _canvasWidth;
+            set
+            {
+                SetProperty(ref _canvasWidth, value);
+                RefreshHeader();
+            }
+        }
+
+        private Double _lineY;
+
+        public Double LineY
+        {
+            get => _lineY;
+            set => SetProperty(ref _lineY, value);
         }
 
         public StartWindowViewModel()
         {
-            WindowHeight = 600;
-            WindowWidth = 800;
-            Header = "Всем привет! Это ПЛАНИРОВЩИК!";
+            //RefreshHeader();
+            CanvasWidth = 2000;
         }
     }
 }
