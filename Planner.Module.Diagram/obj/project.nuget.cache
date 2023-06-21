@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "N/Bo2Mr1i51fif07dJQ9jkVsB871hp0heh7LmSTikD89ZD/4V2d8RyGNCqi7PY4cAGAFl9RKMsxpylMpek09UA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\danil\\OneDrive - Череповецкий Государственный Университет\\Практика\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danil\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\danil\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\danil\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
+  ],
+  "logs": []
+}
