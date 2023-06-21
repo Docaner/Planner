@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danil\\OneDrive - Череповецкий Государственный Университет\\Практика\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {}
+    "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danil\\OneDrive - Череповецкий Государственный Университет\\Практика\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
+    "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danil\\OneDrive - Череповецкий Государственный Университет\\Практика\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+        "projectUniqueName": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
         "projectName": "Planner.Module.Diagram",
-        "projectPath": "C:\\Users\\danil\\OneDrive - Череповецкий Государственный Университет\\Практика\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+        "projectPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
         "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danil\\OneDrive - Череповецкий Государственный Университет\\Практика\\Planner\\Planner\\Planner.Module.Diagram\\obj\\",
+        "outputPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",

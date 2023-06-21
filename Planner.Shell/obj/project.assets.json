@@ -1183,11 +1183,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danil\\OneDrive - Череповецкий Государственный Университет\\Практика\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
+      "projectUniqueName": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
       "projectName": "Planner.Shell",
-      "projectPath": "C:\\Users\\danil\\OneDrive - Череповецкий Государственный Университет\\Практика\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
+      "projectPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
       "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danil\\OneDrive - Череповецкий Государственный Университет\\Практика\\Planner\\Planner\\Planner.Shell\\obj\\",
+      "outputPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Shell\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1204,8 +1204,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\danil\\OneDrive - Череповецкий Государственный Университет\\Практика\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
-              "projectPath": "C:\\Users\\danil\\OneDrive - Череповецкий Государственный Университет\\Практика\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj"
+            "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
+              "projectPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj"
             }
           }
         }

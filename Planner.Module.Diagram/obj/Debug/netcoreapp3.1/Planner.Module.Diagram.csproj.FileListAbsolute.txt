@@ -24,3 +24,29 @@ C:\Users\danil\OneDrive - Череповецкий Государственны�
 C:\Users\danil\OneDrive - Череповецкий Государственный Университет\Практика\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.dll
 C:\Users\danil\OneDrive - Череповецкий Государственный Университет\Практика\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.pdb
 C:\Users\danil\OneDrive - Череповецкий Государственный Университет\Практика\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.genruntimeconfig.cache
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.exe
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.deps.json
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.runtimeconfig.json
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.runtimeconfig.dev.json
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.pdb
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Prism.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Prism.Wpf.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.csproj.AssemblyReference.cache
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Views\StartWindow.g.cs
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\App.g.cs
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram_MarkupCompile.cache
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram_MarkupCompile.lref
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Views\StartWindow.baml
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.g.resources
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.GeneratedMSBuildEditorConfig.editorconfig
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.AssemblyInfoInputs.cache
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.AssemblyInfo.cs
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.csproj.CoreCompileInputs.cache
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.csproj.CopyComplete
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.pdb
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.genruntimeconfig.cache

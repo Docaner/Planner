@@ -35,3 +35,40 @@ C:\Users\danil\OneDrive - Череповецкий Государственны�
 C:\Users\danil\OneDrive - Череповецкий Государственный Университет\Практика\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.dll
 C:\Users\danil\OneDrive - Череповецкий Государственный Университет\Практика\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.pdb
 C:\Users\danil\OneDrive - Череповецкий Государственный Университет\Практика\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.genruntimeconfig.cache
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.deps.json
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.runtimeconfig.json
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.runtimeconfig.dev.json
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.exe
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Shell.exe
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Shell.deps.json
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Shell.runtimeconfig.json
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Shell.runtimeconfig.dev.json
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Shell.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Shell.pdb
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\DryIoc.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Prism.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Prism.DryIoc.Wpf.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Prism.Unity.Wpf.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Prism.Wpf.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Unity.Abstractions.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Unity.Container.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.pdb
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.csproj.AssemblyReference.cache
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Views\StartWindow.g.cs
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\App.g.cs
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell_MarkupCompile.cache
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell_MarkupCompile.lref
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Views\StartWindow.baml
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.g.resources
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.GeneratedMSBuildEditorConfig.editorconfig
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.AssemblyInfoInputs.cache
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.AssemblyInfo.cs
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.csproj.CoreCompileInputs.cache
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.csproj.CopyComplete
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.dll
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.pdb
+D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.genruntimeconfig.cache
