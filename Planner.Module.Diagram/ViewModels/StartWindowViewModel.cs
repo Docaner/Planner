@@ -78,8 +78,9 @@ namespace Planner.Module.Diagram.ViewModels
 
         public void UpdateHourLine()
         {
+            double y2 = CanvasHeight - 20;
             foreach (LineItem line in CanvasHourLines)
-                line.Y2 = CanvasHeight;
+                line.Y2 = y2;
         }
 
         public StartWindowViewModel()
