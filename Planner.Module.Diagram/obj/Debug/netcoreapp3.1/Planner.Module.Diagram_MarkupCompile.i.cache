@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Данил\Desktop\Практика\Planner\Planner.Module.Diagram\App.xaml
-2-1709689102
+31079077539
 
-14-1000071325
+151283758093
 1951991090705
-MainWindow.xaml;Views\StartWindow.xaml;
+Components\Plavka.xaml;MainWindow.xaml;Views\StartWindow.xaml;
 
 True
 

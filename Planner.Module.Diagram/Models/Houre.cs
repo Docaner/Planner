@@ -22,6 +22,11 @@ namespace Planner.Module.Diagram.Models
         
 
         }
+
+        public Houre()
+        {
+        }
+
         public void Houreses(int value)
         {
             minutedToHoure.minutetohoure(value, _minuted, _houre);

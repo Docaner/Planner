@@ -1,10 +1,10 @@
-﻿using Planner.Module.Diagram.Models;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
+using Planner.Module.Diagram.Models;
 
 namespace Planner.Module.Diagram.ViewModels
 {
@@ -20,9 +20,6 @@ namespace Planner.Module.Diagram.ViewModels
         }
         private string _header;
 
-        /// <summary>
-        /// Метод обновления заголовка
-        /// </summary>
         void RefreshHeader() => Header = "Всем привет! Это ПЛАНИРОВЩИК!" + CanvasHeight + " and " + CanvasWidth;
         
         /// <summary>
@@ -35,10 +32,16 @@ namespace Planner.Module.Diagram.ViewModels
             {
                 SetProperty(ref _canvasHeight, value);
                 RefreshHeader();
+                UpdateHeight();
                 LineY = value - 20.0;
             }
         }
         private Double _canvasHeight = 100;
+
+        public void UpdateHeight()
+        {
+            UpdateHourLine();
+        }
 
         /// <summary>
         /// Ширина поля Canvas
@@ -73,6 +76,12 @@ namespace Planner.Module.Diagram.ViewModels
 
         private ObservableCollection<LineItem> _canvasHourLines;
 
+        public void UpdateHourLine()
+        {
+            foreach (LineItem line in CanvasHourLines)
+                line.Y2 = CanvasHeight;
+        }
+
         public StartWindowViewModel()
         {
             //RefreshHeader();
@@ -84,7 +93,6 @@ namespace Planner.Module.Diagram.ViewModels
         {
             CanvasHourLines = new ObservableCollection<LineItem>();
 
-            LineItem.Y2 = CanvasHeight;
             LineItem line;
 
             double step = 50.0;
@@ -92,7 +100,7 @@ namespace Planner.Module.Diagram.ViewModels
 
             while (width < CanvasWidth)
             {
-                line = new LineItem(width, 0.0, width);
+                line = new LineItem(width, 0.0, width, CanvasHeight);
                 CanvasHourLines.Add(line);
                 width += step;
             }

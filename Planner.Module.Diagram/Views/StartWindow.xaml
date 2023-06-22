@@ -20,14 +20,19 @@
                 <RotateTransform Angle="-90"/>
             </TextBlock.LayoutTransform>
         </TextBlock>
-        <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+        <ScrollViewer Grid.Column="1" 
+                      HorizontalScrollBarVisibility="Auto" 
+                      VerticalScrollBarVisibility="Disabled">
             <ItemsControl ItemsSource="{Binding CanvasHourLines}">
-                <behaviors:Interaction.Behaviors>
-                    <md:BindingToReadOnlyPropertyBehavior Target="{Binding CanvasHeight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Property="ActualHeight"/>
-                </behaviors:Interaction.Behaviors>
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <Canvas Width="{Binding CanvasWidth}"/>
+                        <Canvas Width="{Binding CanvasWidth}">
+                            <behaviors:Interaction.Behaviors>
+                                <md:BindingToReadOnlyPropertyBehavior 
+                                    Target="{Binding CanvasHeight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                    Property="ActualHeight"/>
+                            </behaviors:Interaction.Behaviors>
+                        </Canvas>
                     </ItemsPanelTemplate>    
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
