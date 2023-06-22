@@ -109,10 +109,6 @@ H:\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.csproj.Co
 H:\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.dll
 H:\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.pdb
 H:\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.genruntimeconfig.cache
-C:\Users\Данил\Desktop\Практика\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.deps.json
-C:\Users\Данил\Desktop\Практика\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.runtimeconfig.json
-C:\Users\Данил\Desktop\Практика\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.runtimeconfig.dev.json
-C:\Users\Данил\Desktop\Практика\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.exe
 C:\Users\Данил\Desktop\Практика\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Shell.exe
 C:\Users\Данил\Desktop\Практика\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Shell.deps.json
 C:\Users\Данил\Desktop\Практика\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Shell.runtimeconfig.json

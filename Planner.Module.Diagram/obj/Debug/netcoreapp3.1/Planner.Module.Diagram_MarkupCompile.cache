@@ -1,7 +1,7 @@
 ﻿Planner.Module.Diagram
 
 
-winexe
+library
 C#
 .cs
 C:\Users\Данил\Desktop\Практика\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\
@@ -9,12 +9,12 @@ Planner.Module.Diagram
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\Данил\Desktop\Практика\Planner\Planner.Module.Diagram\App.xaml
-31079077539
 
-13105852497
+2-327967802
+
+101339022054
 1951991090705
-Components\Plavka.xaml;MainWindow.xaml;Views\StartWindow.xaml;
+Components\Plavka.xaml;Views\StartWindow.xaml;
 
-False
+True
 
