@@ -1,6 +1,8 @@
-﻿using Prism.Mvvm;
+﻿using Planner.Module.Diagram.Models;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
 
@@ -8,16 +10,24 @@ namespace Planner.Module.Diagram.ViewModels
 {
     public class StartWindowViewModel : BindableBase
     {
-        private string _header;
+        /// <summary>
+        /// Заголовок
+        /// </summary>
         public string Header
         {
             get => _header;
             set => SetProperty(ref _header, value);
         }
+        private string _header;
 
+        /// <summary>
+        /// Метод обновления заголовка
+        /// </summary>
         void RefreshHeader() => Header = "Всем привет! Это ПЛАНИРОВЩИК!" + CanvasHeight + " and " + CanvasWidth;
-
-        private Double _canvasHeight;
+        
+        /// <summary>
+        /// Высота поля Canvas
+        /// </summary>
         public Double CanvasHeight
         {
             get => _canvasHeight;
@@ -28,8 +38,11 @@ namespace Planner.Module.Diagram.ViewModels
                 LineY = value - 20.0;
             }
         }
+        private Double _canvasHeight = 100;
 
-        private Double _canvasWidth;
+        /// <summary>
+        /// Ширина поля Canvas
+        /// </summary>
         public Double CanvasWidth
         {
             get => _canvasWidth;
@@ -39,19 +52,51 @@ namespace Planner.Module.Diagram.ViewModels
                 RefreshHeader();
             }
         }
+        private Double _canvasWidth;
 
-        private Double _lineY;
-
+        /// <summary>
+        /// Кордината Y таймлайна
+        /// </summary>
         public Double LineY
         {
             get => _lineY;
             set => SetProperty(ref _lineY, value);
         }
+        private Double _lineY;
+
+
+        public ObservableCollection<LineItem> CanvasHourLines
+        {
+            get => _canvasHourLines;
+            set => SetProperty(ref _canvasHourLines, value);
+        }
+
+        private ObservableCollection<LineItem> _canvasHourLines;
 
         public StartWindowViewModel()
         {
             //RefreshHeader();
             CanvasWidth = 2000;
+            LinesDraw();
         }
+
+        void LinesDraw()
+        {
+            CanvasHourLines = new ObservableCollection<LineItem>();
+
+            LineItem.Y2 = CanvasHeight;
+            LineItem line;
+
+            double step = 50.0;
+            double width = step;
+
+            while (width < CanvasWidth)
+            {
+                line = new LineItem(width, 0.0, width);
+                CanvasHourLines.Add(line);
+                width += step;
+            }
+        }
+
     }
 }
