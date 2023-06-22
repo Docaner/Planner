@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\
+H:\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\
 Planner.Shell
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\App.xaml
+H:\Planner\Planner\Planner.Shell\App.xaml
 2-1709689102
 
 7915383360
-201-928697484
+201-740017458
 MainWindow.xaml;Views\StartWindow.xaml;
 
-False
+True
 

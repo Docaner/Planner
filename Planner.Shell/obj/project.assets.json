@@ -1178,19 +1178,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danil\\.nuget\\packages\\": {}
+    "C:\\Users\\mao35\\.nuget\\packages\\": {},
+    "G:\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
+      "projectUniqueName": "H:\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
       "projectName": "Planner.Shell",
-      "projectPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
-      "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
-      "outputPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Shell\\obj\\",
+      "projectPath": "H:\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
+      "packagesPath": "C:\\Users\\mao35\\.nuget\\packages\\",
+      "outputPath": "H:\\Planner\\Planner\\Planner.Shell\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "G:\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mao35\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1204,8 +1209,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
-              "projectPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj"
+            "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
+              "projectPath": "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj"
             }
           }
         }
@@ -1256,7 +1261,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

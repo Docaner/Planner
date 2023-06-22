@@ -10,14 +10,29 @@ namespace Planner.Module.Diagram.Models
 
     {
         string _name;
+        string _agregatorname;
         int _konvminutestart;
         int _konvminuteend;
         int _uvdminutestart;
         int _uvdminuteend;
         int _upkinutestart;
         int _upkinuteend;
+        Houre time_Start;
+        Houre time_End;
         Houre start1, start2, start3, end1, end2, end3;
 
+        public Houre Time_Start {
+            get => time_Start; set => SetProperty(ref time_Start, value);
+        }
+
+        public Houre Time_End
+        {
+            get => time_End;set=>SetProperty(ref time_End, value);
+}
+        public string AgregatorName
+        {
+            get => _agregatorname;set=>SetProperty(ref _agregatorname, value);
+        }
         public Houre Start1
         {
             get => start1; set => SetProperty(ref start1, value);
@@ -31,21 +46,21 @@ namespace Planner.Module.Diagram.Models
             get => start2; set => SetProperty(ref start2, value);
         }
         public Houre End3 {
-            get => end2; set => SetProperty(ref end2, value);
+            get => end3; set => SetProperty(ref end3, value);
         }
         public Houre Start3
         {
             get => start3; set => SetProperty(ref start3, value);
         }
-        public Houre End4
+        public Houre End2
         {
-            get => end3; set => SetProperty(ref end3, value);
+            get => end2; set => SetProperty(ref end2, value);
         }
 
-        string Name { get { return _name; }
+    public  string Name { get { return _name; }
             set => SetProperty(ref _name, value);
         }
-        int Konvminutestart
+  public  int Konvminutestart
         {
             get => _konvminutestart;
             set { SetProperty(ref _konvminutestart, value);
@@ -53,7 +68,7 @@ namespace Planner.Module.Diagram.Models
             }
 
         }
-        int Konvminuteend
+      public  int Konvminuteend
         {
             get => _konvminuteend;
             set { SetProperty(ref _konvminuteend, value);
@@ -61,7 +76,7 @@ namespace Planner.Module.Diagram.Models
             }
 
         }
-        int Udminutestart
+    public    int Udminutestart
         {
             get => _uvdminutestart; set
             {
@@ -69,21 +84,21 @@ namespace Planner.Module.Diagram.Models
                 Start2.Houreses(value);
             }
             }
-        int Udminuteend
+     public   int Udminuteend
         {
             get => _uvdminuteend; set { SetProperty(ref _uvdminuteend, value);
 
-                End3.Houreses(value);
+                End2.Houreses(value);
             }
 }
-int Upkinutestart
+public int Upkinutestart
         {
             get => _upkinutestart; set { SetProperty(ref _upkinutestart, value);
                 Start3.Houreses(value);
             }
             
         }
-        int Upkinuminuteend
+      public  int Upkinuminuteend
         {
             get => _upkinuteend; set { SetProperty(ref _upkinuteend, value);
                 End3.Houreses(value);
@@ -100,7 +115,9 @@ int Upkinutestart
             Udminuteend = udminuteend;
             Upkinutestart = upkinutestart;
             Upkinuminuteend = upkinuminuteend;
-           
+            AgregatorName = "";
+            Time_Start = new Houre(100);
+            Time_End = new Houre(100);
         }
     }
 }

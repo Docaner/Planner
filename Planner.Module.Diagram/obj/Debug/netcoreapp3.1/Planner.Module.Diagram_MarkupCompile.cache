@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\
+H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\
 Planner.Module.Diagram
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\App.xaml
-2-1709689102
+H:\Planner\Planner\Planner.Module.Diagram\App.xaml
+31079077539
 
-11206101391
-195410820846
-MainWindow.xaml;Views\StartWindow.xaml;
+12-1805036487
+195324047354
+Components\Plavka.xaml;MainWindow.xaml;Views\StartWindow.xaml;
 
 False
 

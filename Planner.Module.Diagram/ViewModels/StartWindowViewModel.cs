@@ -1,9 +1,10 @@
-﻿using Prism.Mvvm;
+﻿using Planner.Module.Diagram.Components;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
-
+using Planner.Module.Diagram.Models;
 namespace Planner.Module.Diagram.ViewModels
 {
     public class StartWindowViewModel : BindableBase
@@ -14,7 +15,7 @@ namespace Planner.Module.Diagram.ViewModels
             get => _header;
             set => SetProperty(ref _header, value);
         }
-
+        public Plavki plavki;
         void RefreshHeader() => Header = "Всем привет! Это ПЛАНИРОВЩИК!" + CanvasHeight + " and " + CanvasWidth;
 
         private Double _canvasHeight;
