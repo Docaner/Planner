@@ -72,10 +72,6 @@ D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1
 D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.dll
 D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.pdb
 D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.genruntimeconfig.cache
-H:\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.deps.json
-H:\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.runtimeconfig.json
-H:\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.runtimeconfig.dev.json
-H:\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.exe
 H:\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Shell.exe
 H:\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Shell.deps.json
 H:\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Planner.Shell.runtimeconfig.json
