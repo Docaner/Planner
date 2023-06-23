@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj": {}
+    "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj": {}
   },
   "projects": {
-    "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
+    "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+        "projectUniqueName": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
         "projectName": "Planner.Module.Diagram",
-        "projectPath": "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
-        "packagesPath": "C:\\Users\\mao35\\.nuget\\packages\\",
-        "outputPath": "H:\\Planner\\Planner\\Planner.Module.Diagram\\obj\\",
+        "projectPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
+        "outputPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "G:\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mao35\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,25 +64,21 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "H:\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj": {
+    "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
+        "projectUniqueName": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
         "projectName": "Planner.Shell",
-        "projectPath": "H:\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
-        "packagesPath": "C:\\Users\\mao35\\.nuget\\packages\\",
-        "outputPath": "H:\\Planner\\Planner\\Planner.Shell\\obj\\",
+        "projectPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
+        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
+        "outputPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Shell\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "G:\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mao35\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,8 +92,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
-                "projectPath": "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj"
+              "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
+                "projectPath": "D:\\Other\\Данил\\ЧГУ\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj"
               }
             }
           }
@@ -152,7 +144,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -96,15 +96,24 @@ namespace Planner.Module.Diagram.ViewModels
 
             LineItem line;
 
-            double step = 50.0;
+            DateTime timeNow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, 0, 0);
+            DateTime timeStart = timeNow.AddDays(-2);
+            DateTime timeEnd = timeNow.AddDays(2);
+
+            DateTime timeIterator = timeStart;
+
+            double step = 60;
             double width = step;
 
-            while (width < CanvasWidth)
+            while (timeIterator < timeEnd)
             {
-                line = new LineItem(width, 0.0, width, CanvasHeight);
+                timeIterator = timeIterator.AddHours(1);
+                line = new LineItem(width, 0.0, width, CanvasHeight, timeIterator);
                 CanvasHourLines.Add(line);
                 width += step;
             }
+
+            CanvasWidth = width;
         }
 
     }
