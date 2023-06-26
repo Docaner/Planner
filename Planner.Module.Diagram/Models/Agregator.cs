@@ -6,15 +6,15 @@ using System.Text;
 
 namespace Planner.Module.Diagram.Models
 {
-    public class Agregator:BindableBase
+    public class Agregator : BindableBase
     {
         ObservableCollection<Plavki> plavkis;
         private string _name;
 
-        private int _id;
+        private int _id = 0;
         public string Name
         {
-            get => _name;set => SetProperty(ref _name, value);
+            get => _name; set => SetProperty(ref _name, value);
         }
         public int Id
         {
@@ -26,13 +26,32 @@ namespace Planner.Module.Diagram.Models
             get => plavkis;
             set => SetProperty(ref plavkis, value);
         }
-        public Agregator(int id)  
+        public Agregator(string name)
         {
-            Name = "";
-            Id = id;
+            Name = name;
+            Id = _id++;
             Plavkis = new ObservableCollection<Plavki>();
         }
-       
+        public void Add(Plavki plavki)
+        {
+            plavkis.Add(plavki);
+            plavki.AgregatorName = Name;
+            if (Name.StartsWith("КОНВ"))
+            {
+                plavki.Time_Start = plavki.Konvminutestart;
+                plavki.Time_End = plavki.Konvminuteend;
+            }
+            else if (Name.StartsWith("УДМ") || Name.StartsWith("ВАКУ"))
+            {
+                plavki.Time_Start = plavki.Udminutestart;
+                plavki.Time_End = plavki.Udminuteend;
+            }
+            else if (Name.StartsWith("УПК") || Name.StartsWith("УНРС"))
+            {
+                plavki.Time_Start = plavki.Upkinutestart;
+                plavki.Time_End = plavki.Udminuteend;
+            }
+        }
 
     }
 }

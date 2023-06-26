@@ -22,7 +22,7 @@ namespace Planner.Module.Diagram.ViewModels
         private string _header;
 
         void RefreshHeader() => Header = "Всем привет! Это ПЛАНИРОВЩИК!" + CanvasHeight + " and " + CanvasWidth;
-        
+
         /// <summary>
         /// Высота поля Canvas
         /// </summary>
@@ -120,41 +120,17 @@ namespace Planner.Module.Diagram.ViewModels
 
         public StartWindowViewModel()
         {
+            Agregators=new ObservableCollection<Agregator>();
             //RefreshHeader();
             CanvasWidth = 2000;
             LinesDraw();
 
-            ObservableCollection<Agregator> agregators = new ObservableCollection<Agregator>()
-            {
-                new Agregator(1) 
-                {
-                    Plavkis = new ObservableCollection<Plavki> 
-                    { 
-                        new Plavki(),
-                        new Plavki(),
-                        new Plavki()
-                    }
-                },
-                new Agregator(2)
-                {
-                    Plavkis = new ObservableCollection<Plavki>
-                    {
-                        new Plavki(),
-                        new Plavki(),
-                        new Plavki()
-                    }
-                },
-                new Agregator(3)
-                {
-                    Plavkis = new ObservableCollection<Plavki>
-                    {
-                        new Plavki(),
-                        new Plavki(),
-                        new Plavki()
-                    }
-                }
-            };
-
+            ObservableCollection<Agregator> agregators = new ObservableCollection<Agregator>();
+            agregators.Add(new Agregator("КОНВ 1"));
+            agregators[0].Add(new Plavki("das", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1));
+        
+           
+    
             Agregators = agregators;
         }
 
