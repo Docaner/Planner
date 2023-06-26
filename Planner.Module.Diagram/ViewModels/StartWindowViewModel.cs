@@ -155,7 +155,7 @@ namespace Planner.Module.Diagram.ViewModels
                     }
                 },
             };
-            agregators[0].Add(new Plavki("das4", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1"));
+          
            
     
             Agregators = agregators;

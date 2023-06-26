@@ -32,26 +32,7 @@ namespace Planner.Module.Diagram.Models
             Id = _id++;
             Plavkis = new ObservableCollection<Plavki>();
         }
-        public void Add(Plavki plavki)
-        {
-            plavkis.Add(plavki);
-            plavki.AgregatorName = Name;
-            if (Name.StartsWith("КОНВ"))
-            {
-                plavki.Time_Start = plavki.Konvminutestart;
-                plavki.Time_End = plavki.Konvminuteend;
-            }
-            else if (Name.StartsWith("УДМ") || Name.StartsWith("ВАКУ"))
-            {
-                plavki.Time_Start = plavki.Udminutestart;
-                plavki.Time_End = plavki.Udminuteend;
-            }
-            else if (Name.StartsWith("УПК") || Name.StartsWith("УНРС"))
-            {
-                plavki.Time_Start = plavki.Upkinutestart;
-                plavki.Time_End = plavki.Udminuteend;
-            }
-        }
+       
 
     }
 }
