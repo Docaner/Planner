@@ -64,7 +64,6 @@ namespace Planner.Module.Diagram.Models
         {
             get => _konvminutestart;
             set { SetProperty(ref _konvminutestart, value);
-                Start1.Houreses(value);
             }
 
         }
@@ -72,7 +71,6 @@ namespace Planner.Module.Diagram.Models
         {
             get => _konvminuteend;
             set { SetProperty(ref _konvminuteend, value);
-                End1.Houreses(value);
             }
 
         }
@@ -81,40 +79,37 @@ namespace Planner.Module.Diagram.Models
             get => _uvdminutestart; set
             {
                 SetProperty(ref _uvdminutestart, value);
-                Start2.Houreses(value);
             }
             }
      public   int Udminuteend
         {
             get => _uvdminuteend; set { SetProperty(ref _uvdminuteend, value);
-
-                End2.Houreses(value);
             }
 }
 public int Upkinutestart
         {
             get => _upkinutestart; set { SetProperty(ref _upkinutestart, value);
-                Start3.Houreses(value);
+                
             }
             
         }
       public  int Upkinuminuteend
         {
             get => _upkinuteend; set { SetProperty(ref _upkinuteend, value);
-                End3.Houreses(value);
+                
             }
         }
-        public Plavki(string name, int konvminutestart, int konvminuteend,  int upkinutestart,  int udminutestart, int udminuteend, int upkinuminuteend)
+        public Plavki()
         {
      
         
-            Name = name;
-            Konvminutestart = konvminutestart;
-            Konvminuteend = konvminuteend;
-            Udminutestart = udminutestart;
-            Udminuteend = udminuteend;
-            Upkinutestart = upkinutestart;
-            Upkinuminuteend = upkinuminuteend;
+            Name = "";
+            Konvminutestart = 0;
+            Konvminuteend = 0;
+            Udminutestart = 0;
+            Udminuteend = 0;
+            Upkinutestart = 0;
+            Upkinuminuteend = 0;
             AgregatorName = "";
             Time_Start = new Houre(100);
             Time_End = new Houre(100);

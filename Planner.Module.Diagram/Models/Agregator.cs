@@ -28,29 +28,11 @@ namespace Planner.Module.Diagram.Models
         }
         public Agregator(int id)  
         {
+            Name = "";
             Id = id;
             Plavkis = new ObservableCollection<Plavki>();
         }
-        public void Add(Plavki plavki)
-        {
-            plavkis.Add(plavki);
-            plavki.AgregatorName= Name;
-            if (Name.StartsWith("КОНВ"))
-            {
-                plavki.Time_Start = plavki.Start1;
-                plavki.Time_End= plavki.End1;
-            }
-            else if (Name.StartsWith("УДМ")|| Name.StartsWith("ВАКУ"))
-            {
-                plavki.Time_Start = plavki.Start2;
-                plavki.Time_End = plavki.End2;
-            }
-            else if (Name.StartsWith("УПК") || Name.StartsWith("УНРС"))
-            {
-                plavki.Time_Start = plavki.Start3;
-                plavki.Time_End = plavki.End3;
-            }
-        }
+       
 
     }
 }

@@ -130,27 +130,27 @@ namespace Planner.Module.Diagram.ViewModels
                 {
                     Plavkis = new ObservableCollection<Plavki> 
                     { 
-                        new Plavki("Krutaya plavka1", 0, 0, 0, 0, 0, 0),
-                        new Plavki("Krutaya plavka2", 0, 0, 0, 0, 0, 0),
-                        new Plavki("Krutaya plavka3", 0, 0, 0, 0, 0, 0)
+                        new Plavki(),
+                        new Plavki(),
+                        new Plavki()
                     }
                 },
                 new Agregator(2)
                 {
                     Plavkis = new ObservableCollection<Plavki>
                     {
-                        new Plavki("Krutaya plavka4", 0, 0, 0, 0, 0, 0),
-                        new Plavki("Krutaya plavka5", 0, 0, 0, 0, 0, 0),
-                        new Plavki("Krutaya plavka6", 0, 0, 0, 0, 0, 0)
+                        new Plavki(),
+                        new Plavki(),
+                        new Plavki()
                     }
                 },
                 new Agregator(3)
                 {
                     Plavkis = new ObservableCollection<Plavki>
                     {
-                        new Plavki("Krutaya plavka7", 0, 0, 0, 0, 0, 0),
-                        new Plavki("Krutaya plavka8", 0, 0, 0, 0, 0, 0),
-                        new Plavki("Krutaya plavka9", 0, 0, 0, 0, 0, 0)
+                        new Plavki(),
+                        new Plavki(),
+                        new Plavki()
                     }
                 }
             };
