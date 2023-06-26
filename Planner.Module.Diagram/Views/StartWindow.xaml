@@ -81,11 +81,15 @@
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
 
-                                <ItemsControl ItemsSource="{Binding Plavki}">
+                                <ItemsControl ItemsSource="{Binding Plavkis}">
                                     
                                     <ItemsControl.ItemsPanel>
                                         <ItemsPanelTemplate>
-                                            <Canvas Grid.Row="{Binding Id}"/>
+                                            <Canvas Grid.Row="{Binding Id}">
+                                                
+                                                
+                                            
+                                            </Canvas>
                                         </ItemsPanelTemplate>
                                     </ItemsControl.ItemsPanel>
 

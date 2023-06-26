@@ -125,9 +125,36 @@ namespace Planner.Module.Diagram.ViewModels
             CanvasWidth = 2000;
             LinesDraw();
 
-            ObservableCollection<Agregator> agregators = new ObservableCollection<Agregator>();
-            agregators.Add(new Agregator("КОНВ 1"));
-            agregators[0].Add(new Plavki("das", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1));
+            ObservableCollection<Agregator> agregators = new ObservableCollection<Agregator>()
+            {
+                new Agregator("Agr1")
+                {
+                    Plavkis = new ObservableCollection<Plavki>()
+                    {
+                        new Plavki("das1", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+                        new Plavki("das2", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+                        new Plavki("das3", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+                    }
+                },
+                new Agregator("Agr2")
+                {
+                    Plavkis = new ObservableCollection<Plavki>()
+                    {
+                        new Plavki("das1", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+                        new Plavki("das2", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+                        new Plavki("das3", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+                    }
+                },
+                new Agregator("Agr3")
+                {
+                    Plavkis = new ObservableCollection<Plavki>()
+                    {
+                        new Plavki("das1", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+                        new Plavki("das2", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+                        new Plavki("das3", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+                    }
+                },
+            };
         
            
     
