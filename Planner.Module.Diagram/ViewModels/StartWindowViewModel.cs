@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
 using Planner.Module.Diagram.Models;
+using Planner.Module.Diagram.Components;
 
 namespace Planner.Module.Diagram.ViewModels
 {
@@ -83,13 +84,6 @@ namespace Planner.Module.Diagram.ViewModels
                 line.Y2 = y2;
         }
 
-        public StartWindowViewModel()
-        {
-            //RefreshHeader();
-            CanvasWidth = 2000;
-            LinesDraw();
-        }
-
         void LinesDraw()
         {
             CanvasHourLines = new ObservableCollection<LineItem>();
@@ -115,6 +109,56 @@ namespace Planner.Module.Diagram.ViewModels
 
             CanvasWidth = width;
         }
+
+        public ObservableCollection<Agregator> Agregators
+        {
+            get => _agregators;
+            set => SetProperty(ref _agregators, value);
+        }
+
+        private ObservableCollection<Agregator> _agregators;
+
+        public StartWindowViewModel()
+        {
+            //RefreshHeader();
+            CanvasWidth = 2000;
+            LinesDraw();
+
+            ObservableCollection<Agregator> agregators = new ObservableCollection<Agregator>()
+            {
+                new Agregator(1) 
+                {
+                    Plavkis = new ObservableCollection<Plavki> 
+                    { 
+                        new Plavki("Krutaya plavka1", 0, 0, 0, 0, 0, 0),
+                        new Plavki("Krutaya plavka2", 0, 0, 0, 0, 0, 0),
+                        new Plavki("Krutaya plavka3", 0, 0, 0, 0, 0, 0)
+                    }
+                },
+                new Agregator(2)
+                {
+                    Plavkis = new ObservableCollection<Plavki>
+                    {
+                        new Plavki("Krutaya plavka4", 0, 0, 0, 0, 0, 0),
+                        new Plavki("Krutaya plavka5", 0, 0, 0, 0, 0, 0),
+                        new Plavki("Krutaya plavka6", 0, 0, 0, 0, 0, 0)
+                    }
+                },
+                new Agregator(3)
+                {
+                    Plavkis = new ObservableCollection<Plavki>
+                    {
+                        new Plavki("Krutaya plavka7", 0, 0, 0, 0, 0, 0),
+                        new Plavki("Krutaya plavka8", 0, 0, 0, 0, 0, 0),
+                        new Plavki("Krutaya plavka9", 0, 0, 0, 0, 0, 0)
+                    }
+                }
+            };
+
+            Agregators = agregators;
+        }
+
+
 
     }
 }

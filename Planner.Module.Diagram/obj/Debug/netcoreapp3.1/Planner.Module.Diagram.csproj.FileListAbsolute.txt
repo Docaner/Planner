@@ -56,3 +56,5 @@ D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netc
 D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.csproj.CoreCompileInputs.cache
 D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.dll
 D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.pdb
+C:\Users\Данил\Desktop\Практика\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Components\Agregotorses.g.cs
+C:\Users\Данил\Desktop\Практика\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Components\Agregotorses.baml

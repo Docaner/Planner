@@ -28,7 +28,6 @@ namespace Planner.Module.Diagram.Models
         }
         public Agregator(int id)  
         {
-            
             Id = id;
             Plavkis = new ObservableCollection<Plavki>();
         }

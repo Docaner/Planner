@@ -6,8 +6,7 @@
              xmlns:local="clr-namespace:Planner.Module.Diagram.Views"
              xmlns:md="clr-namespace:Planner.Module.Diagram.Models"
              xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
-             xmlns:prism="http://prismlibrary.com/"
-             xmlns:vm="clr-namespace:Planner.Module.Diagram.ViewModels"
+             xmlns:components="clr-namespace:Planner.Module.Diagram.Components"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
@@ -71,6 +70,38 @@
                             </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
+
+                <Canvas Width="{Binding CanvasWidth}">
+                    <ItemsControl ItemsSource="{Binding Agregators}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="1" Height="{Binding CanvasHeight}"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+
+                                <ItemsControl ItemsSource="{Binding Plavki}">
+                                    
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <Canvas Grid.Row="{Binding Id}"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <components:Plavka/>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                
+                                </ItemsControl>
+                                
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Canvas>
+                
             </Grid>
         </ScrollViewer>
         
