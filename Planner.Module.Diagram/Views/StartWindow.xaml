@@ -14,22 +14,40 @@
             <ColumnDefinition Width="0.075*"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <TextBlock Text="{Binding Header}" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock.LayoutTransform>
-                <RotateTransform Angle="-90"/>
-            </TextBlock.LayoutTransform>
-        </TextBlock>
-        <ScrollViewer Grid.Column="1" 
+
+            <ItemsControl ItemsSource="{Binding Filler.Agregators}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Grid.Column="0" Columns="1" Height="{Binding Filler.Height}"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+
+                        <TextBlock Text="{Binding Name}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Grid.Row=
+                                    "{
+                                        Binding Path=(ItemsControl.AlternationIndex),
+                                        RelativeSource={RelativeSource TemplatedParent}
+                                    }"/>
+
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <ScrollViewer Grid.Column="1" 
                       HorizontalScrollBarVisibility="Auto" 
                       VerticalScrollBarVisibility="Disabled">
             <Grid>
-                <ItemsControl ItemsSource="{Binding CanvasHourLines}">
+                <ItemsControl ItemsSource="{Binding Filler.HourLines}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <Canvas Width="{Binding CanvasWidth}" HorizontalAlignment="Center">
+                            <Canvas Width="{Binding Filler.Width}" HorizontalAlignment="Center">
                                 <behaviors:Interaction.Behaviors>
                                     <md:BindingToReadOnlyPropertyBehavior 
-                                        Target="{Binding CanvasHeight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                        Target="{Binding Filler.Height, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                                         Property="ActualHeight"/>
                                 </behaviors:Interaction.Behaviors>
                             </Canvas>
@@ -53,11 +71,11 @@
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
-                
-                <ItemsControl ItemsSource="{Binding CanvasHourLines}">
+
+                <ItemsControl ItemsSource="{Binding Filler.HourLines}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <Canvas Width="{Binding CanvasWidth}" HorizontalAlignment="Center"/>
+                            <Canvas Width="{Binding Filler.Width}" HorizontalAlignment="Center"/>
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
@@ -71,31 +89,37 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
 
-                <Canvas Width="{Binding CanvasWidth}">
-                    <ItemsControl ItemsSource="{Binding Agregators}">
+                <Canvas Width="{Binding Filler.Width}">
+                    <ItemsControl ItemsSource="{Binding Filler.Agregators}">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
-                                <UniformGrid Columns="1" Height="{Binding CanvasHeight}"/>
+                                <UniformGrid Columns="1" Height="{Binding Filler.Height}"/>
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
 
-                                <ItemsControl ItemsSource="{Binding Plavkis}">
-                                    
+                                <ItemsControl ItemsSource="{Binding Meltings}">
+
                                     <ItemsControl.ItemsPanel>
                                         <ItemsPanelTemplate>
-                                            <Canvas Grid.Row="{Binding Id}">
-                                                
-                                                
-                                            
-                                            </Canvas>
+                                            <Canvas Grid.Row=
+                                                    "{
+                                                        Binding Path=(ItemsControl.AlternationIndex),
+                                                        RelativeSource={RelativeSource TemplatedParent}
+                                                    }"/>
                                         </ItemsPanelTemplate>
                                     </ItemsControl.ItemsPanel>
+                                    
+                                    <ItemsControl.ItemContainerStyle>
+                                        <Style TargetType="ContentPresenter">
+                                            <Setter Property="Canvas.Left" Value="{Binding CanvasLeft}"/>
+                                        </Style>
+                                    </ItemsControl.ItemContainerStyle>
 
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate>
-                                            <components:Plavka/>
+                                            <components:Melting/>
                                         </DataTemplate>
                                     </ItemsControl.ItemTemplate>
                                 

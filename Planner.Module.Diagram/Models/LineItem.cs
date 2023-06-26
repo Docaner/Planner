@@ -23,15 +23,22 @@ namespace Planner.Module.Diagram.Models
         public double X2Text { get => _x2Text; set => SetProperty(ref _x2Text, value); }
         private double _x2Text;
 
+        private void UpdateX2Text()
+        {
+            X2Text = X2 - TextWidth / 2;
+        }
+
         public double TextWidth 
         { 
             get => _textWidth;
             set
             {
                 SetProperty(ref _textWidth, value);
-                UpdatedTextWidth();
+                UpdateX2Text();
             }
         }
+
+        private double _textWidth;
 
         public DateTime Time 
         { 
@@ -55,13 +62,6 @@ namespace Planner.Module.Diagram.Models
                 TimeStringFormat = Time.ToString("HH:mm");
 
         }
-
-        private void UpdatedTextWidth()
-        {
-            X2Text = X2 - TextWidth / 2;
-        }
-
-        private double _textWidth;
 
         public LineItem(double x1, double y1, double x2, double y2, DateTime time)
         {

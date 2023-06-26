@@ -8,31 +8,23 @@ namespace Planner.Module.Diagram.Models
 {
     public class Agregator : BindableBase
     {
-        ObservableCollection<Plavki> plavkis;
+        /// <summary>
+        /// Название агрегатора
+        /// </summary>
+        public string Name { get => _name; set => SetProperty(ref _name, value); }
         private string _name;
 
-        private int _id = 0;
-        public string Name
-        {
-            get => _name; set => SetProperty(ref _name, value);
-        }
-        public int Id
-        {
-            get => _id;
-            set => SetProperty(ref _id, value);
-        }
-        public ObservableCollection<Plavki> Plavkis
-        {
-            get => plavkis;
-            set => SetProperty(ref plavkis, value);
-        }
-        public Agregator(string name)
+
+        /// <summary>
+        /// Коллекция плавок
+        /// </summary>
+        public ObservableCollection<Melting> Meltings { get => _meltings; private set => SetProperty(ref _meltings, value); }
+        private ObservableCollection<Melting> _meltings;
+
+        public Agregator(string name, ObservableCollection<Melting> meltings)
         {
             Name = name;
-            Id = _id++;
-            Plavkis = new ObservableCollection<Plavki>();
+            Meltings = meltings;
         }
-       
-
     }
 }

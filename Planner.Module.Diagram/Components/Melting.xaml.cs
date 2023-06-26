@@ -16,9 +16,9 @@ namespace Planner.Module.Diagram.Components
     /// <summary>
     /// Логика взаимодействия для Plavka.xaml
     /// </summary>
-    public partial class Plavka : UserControl
+    public partial class Melting : UserControl
     {
-        public Plavka()
+        public Melting()
         {
             InitializeComponent();
         }

@@ -5,12 +5,55 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
 using Planner.Module.Diagram.Models;
-using Planner.Module.Diagram.Components;
 
 namespace Planner.Module.Diagram.ViewModels
 {
     public class StartWindowViewModel : BindableBase
     {
+        public CanvasFiller Filler { get; private set; }
+
+        public StartWindowViewModel()
+        {
+            ContextViewModel.StartWindow = this;
+            Filler = new CanvasFiller();
+
+            ObservableCollection<Agregator> agregators = new ObservableCollection<Agregator>()
+            {
+                new Agregator
+                (
+                    "Agr1",
+                    new ObservableCollection<Melting>()
+                    {
+                        new Melting(1, DateTime.Now.AddDays(-2).AddHours(1), DateTime.Now.AddDays(-2).AddHours(3)),
+                        new Melting(2, DateTime.Now.AddDays(-2).AddHours(4), DateTime.Now.AddDays(-2).AddHours(6)),
+                        new Melting(3, DateTime.Now.AddDays(-2).AddHours(7), DateTime.Now.AddDays(-2).AddHours(9))
+                    }
+                ),
+                new Agregator
+                (
+                    "Agr2",
+                    new ObservableCollection<Melting>()
+                    {
+                        new Melting(123, DateTime.Now.AddDays(-2).AddHours(0), DateTime.Now.AddDays(-2).AddHours(2)),
+                        new Melting(124, DateTime.Now.AddDays(-2).AddHours(3), DateTime.Now.AddDays(-2).AddHours(5)),
+                        new Melting(125, DateTime.Now.AddDays(-2).AddHours(8), DateTime.Now.AddDays(-2).AddHours(10))
+                    }
+                ),
+                new Agregator
+                (
+                    "Agr3",
+                    new ObservableCollection<Melting>()
+                    {
+                        new Melting(556, DateTime.Now.AddDays(-2).AddHours(3), DateTime.Now.AddDays(-2).AddHours(6)),
+                        new Melting(665, DateTime.Now.AddDays(-2).AddHours(7), DateTime.Now.AddDays(-2).AddHours(10)),
+                        new Melting(777, DateTime.Now.AddDays(-2).AddHours(11), DateTime.Now.AddDays(-2).AddHours(13))
+                    }
+                ),
+            };
+
+            Filler.Agregators = agregators;
+        }
+
         /// <summary>
         /// Заголовок
         /// </summary>
@@ -21,147 +64,6 @@ namespace Planner.Module.Diagram.ViewModels
         }
         private string _header;
 
-        void RefreshHeader() => Header = "Всем привет! Это ПЛАНИРОВЩИК!" + CanvasHeight + " and " + CanvasWidth;
-
-        /// <summary>
-        /// Высота поля Canvas
-        /// </summary>
-        public Double CanvasHeight
-        {
-            get => _canvasHeight;
-            set
-            {
-                SetProperty(ref _canvasHeight, value);
-                RefreshHeader();
-                UpdateHeight();
-                LineY = value - 20.0;
-            }
-        }
-        private Double _canvasHeight = 100;
-
-        public void UpdateHeight()
-        {
-            UpdateHourLine();
-        }
-
-        /// <summary>
-        /// Ширина поля Canvas
-        /// </summary>
-        public Double CanvasWidth
-        {
-            get => _canvasWidth;
-            set
-            {
-                SetProperty(ref _canvasWidth, value);
-                RefreshHeader();
-            }
-        }
-        private Double _canvasWidth;
-
-        /// <summary>
-        /// Кордината Y таймлайна
-        /// </summary>
-        public Double LineY
-        {
-            get => _lineY;
-            set => SetProperty(ref _lineY, value);
-        }
-        private Double _lineY;
-
-
-        public ObservableCollection<LineItem> CanvasHourLines
-        {
-            get => _canvasHourLines;
-            set => SetProperty(ref _canvasHourLines, value);
-        }
-
-        private ObservableCollection<LineItem> _canvasHourLines;
-
-        public void UpdateHourLine()
-        {
-            double y2 = CanvasHeight - 20;
-            foreach (LineItem line in CanvasHourLines)
-                line.Y2 = y2;
-        }
-
-        void LinesDraw()
-        {
-            CanvasHourLines = new ObservableCollection<LineItem>();
-
-            LineItem line;
-
-            DateTime timeNow = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, 0, 0);
-            DateTime timeStart = timeNow.AddDays(-2);
-            DateTime timeEnd = timeNow.AddDays(2);
-
-            DateTime timeIterator = timeStart;
-
-            double step = 60;
-            double width = step;
-
-            while (timeIterator < timeEnd)
-            {
-                timeIterator = timeIterator.AddHours(1);
-                line = new LineItem(width, 0.0, width, CanvasHeight, timeIterator);
-                CanvasHourLines.Add(line);
-                width += step;
-            }
-
-            CanvasWidth = width;
-        }
-
-        public ObservableCollection<Agregator> Agregators
-        {
-            get => _agregators;
-            set => SetProperty(ref _agregators, value);
-        }
-
-        private ObservableCollection<Agregator> _agregators;
-
-        public StartWindowViewModel()
-        {
-            Agregators=new ObservableCollection<Agregator>();
-            //RefreshHeader();
-            CanvasWidth = 2000;
-            LinesDraw();
-
-            ObservableCollection<Agregator> agregators = new ObservableCollection<Agregator>()
-            {
-                new Agregator("КОНВ")
-                {
-                    Plavkis = new ObservableCollection<Plavki>()
-                    {
-                        new Plavki("das1", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,"КОНВ 1"),
-                        new Plavki("das2", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1"),
-                        new Plavki("das3", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1")
-                    }
-                },
-                new Agregator("Agr2")
-                {
-                    Plavkis = new ObservableCollection<Plavki>()
-                    {
-                        new Plavki("das1", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1"),
-                        new Plavki("das2", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1"),
-                        new Plavki("das3", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1")
-                    }
-                },
-                new Agregator("Agr3")
-                {
-                    Plavkis = new ObservableCollection<Plavki>()
-                    {
-                        new Plavki("das1", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1"),
-                        new Plavki("das2", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1"),
-                        new Plavki("das3", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1")
-                    }
-                },
-            };
-          
-           
-    
-            Agregators = agregators;
-        }
-
-
-
+        public void RefreshHeader() => Header = "Всем привет! Это ПЛАНИРОВЩИК!" + Filler?.Height + " and " + Filler?.Width;
     }
 }
