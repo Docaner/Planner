@@ -15,12 +15,15 @@
             <RowDefinition/>
 
         </Grid.RowDefinitions>
-        <TextBlock x:Name="Name" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=Name}"></TextBlock>
+        <TextBlock x:Name="Name" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{Binding Path=Name}"></TextBlock>
         <TextBlock x:Name="Start" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock.Text>
-                <MultiBinding StringFormat="Загруженность: {0}:{1} - 1:1">
-                        <Binding Path="Time_Start"/>
-                        <Binding Path="Time_End"/>
+                <MultiBinding StringFormat="Время: {0}:{1}-{2}:{3}">
+                    <Binding Path="Time_Start.Hour"/>
+                    <Binding Path="Time_Start.Minute"/>
+                    <Binding Path="Time_End.Hour"/>
+                    <Binding Path="Time_End.Minute"/>
+
                 </MultiBinding>
             </TextBlock.Text>
         </TextBlock>

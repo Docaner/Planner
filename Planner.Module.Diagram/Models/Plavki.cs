@@ -1,4 +1,5 @@
-﻿using Prism.Mvvm;
+﻿using Planner.Module.Diagram.Components;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,15 +20,14 @@ namespace Planner.Module.Diagram.Models
         DateTime _upkinuteend;
         DateTime time_Start;
         DateTime time_End;
-        string time_Start1;
-        string time_End1;
+       
 
         public DateTime Time_Start
         {
             get => time_Start; set
             {
                 SetProperty(ref time_Start, value);
-                ChangeTimeStringFormat(time_Start, Time_Start1);
+                
             }
 
         }
@@ -37,19 +37,11 @@ namespace Planner.Module.Diagram.Models
             get => time_End; set
             {
                 SetProperty(ref time_End, value);
-                ChangeTimeStringFormat(time_End, Time_End1);
+                
             }
 
         }
-        public string Time_Start1
-        {
-            get => time_Start1; set => SetProperty(ref time_Start1, value);
-        }
-
-        public string Time_End1
-        {
-            get => time_End1; set => SetProperty(ref time_End1, value);
-        }
+       
         public string AgregatorName
         {
             get => _agregatorname; set => SetProperty(ref _agregatorname, value);
@@ -110,31 +102,38 @@ namespace Planner.Module.Diagram.Models
 
             }
         }
-        public Plavki(string name, int ksh, int ksm, int keh, int kem, int udmsh, int udmsm, int udmeh, int udesm, int upksh, int upksm, int upkeh, int upkesm)
+        public Plavki(string name, int ksh, int ksm, int keh, int kem, int udmsh, int udmsm, int udmeh, int udesm, int upksh, int upksm, int upkeh, int upkesm,string agregatorname)
         {
 
 
 
-            Name = "";
+            Name = name;
             Konvminutestart = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, ksh, ksm, 0);
             Konvminuteend = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, ksh, ksm, 0);
             Udminutestart = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, ksh, ksm, 0);
             Udminuteend = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, ksh, ksm, 0);
             Upkinutestart = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, ksh, ksm, 0);
             Upkinuminuteend = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, ksh, ksm, 0);
-            AgregatorName = "КОНВ";
+           
             Time_Start = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, 0, 0);
             Time_End = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, 50, 0);
-            Time_Start1 = "";
-            Time_End1 = "";
-            ChangeTimeStringFormat(Time_Start, Time_Start1);
-            ChangeTimeStringFormat(Time_End, Time_End1);
-        }
-        private void ChangeTimeStringFormat(DateTime a, string b)
-        {
-
-            b = a.ToString("HH:mm");
-
+            AgregatorName = agregatorname;
+            if (agregatorname.StartsWith("КОНВ"))
+            {
+                Time_Start = Konvminutestart;
+                Time_End = Konvminuteend;
+            }
+            else if (Name.StartsWith("УДМ") || Name.StartsWith("ВАКУ"))
+            {
+                Time_Start = Udminutestart;
+                Time_End = Udminuteend;
+            }
+            else if (Name.StartsWith("УПК") || Name.StartsWith("УНРС"))
+            {
+                Time_Start = Upkinutestart;
+                Time_End = Udminuteend;
+            }
         }
     }
-}
+ 
+    }

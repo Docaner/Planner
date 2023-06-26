@@ -127,35 +127,35 @@ namespace Planner.Module.Diagram.ViewModels
 
             ObservableCollection<Agregator> agregators = new ObservableCollection<Agregator>()
             {
-                new Agregator("Agr1")
+                new Agregator("КОНВ")
                 {
                     Plavkis = new ObservableCollection<Plavki>()
                     {
-                        new Plavki("das1", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-                        new Plavki("das2", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-                        new Plavki("das3", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+                        new Plavki("das1", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,"КОНВ 1"),
+                        new Plavki("das2", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1"),
+                        new Plavki("das3", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1")
                     }
                 },
                 new Agregator("Agr2")
                 {
                     Plavkis = new ObservableCollection<Plavki>()
                     {
-                        new Plavki("das1", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-                        new Plavki("das2", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-                        new Plavki("das3", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+                        new Plavki("das1", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1"),
+                        new Plavki("das2", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1"),
+                        new Plavki("das3", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1")
                     }
                 },
                 new Agregator("Agr3")
                 {
                     Plavkis = new ObservableCollection<Plavki>()
                     {
-                        new Plavki("das1", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-                        new Plavki("das2", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-                        new Plavki("das3", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+                        new Plavki("das1", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1"),
+                        new Plavki("das2", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1"),
+                        new Plavki("das3", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1")
                     }
                 },
             };
-        
+            agregators[0].Add(new Plavki("das4", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, "КОНВ 1"));
            
     
             Agregators = agregators;
