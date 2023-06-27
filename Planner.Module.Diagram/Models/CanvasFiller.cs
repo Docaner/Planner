@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Data;
 using System.Text;
 
 namespace Planner.Module.Diagram.Models
@@ -18,7 +20,6 @@ namespace Planner.Module.Diagram.Models
             set
             {
                 SetProperty(ref _width, value);
-                ContextViewModel.StartWindow.RefreshHeader();
             }
         }
         private double _width;
@@ -33,12 +34,16 @@ namespace Planner.Module.Diagram.Models
             set
             {
                 SetProperty(ref _height, value);
-                ContextViewModel.StartWindow.RefreshHeader();
+                
                 UpdateHourLines();
+                UpdateLineNow();
                 //UpdateMaxHeightAgregators();
             }
         }
         private double _height;
+
+
+
         /*
         /// <summary>
         /// Высота поля с агрегаторами
@@ -68,6 +73,19 @@ namespace Planner.Module.Diagram.Models
             HeightAgregator = MaxHeightAgregators / Agregators.Count;
         }*/
 
+
+
+
+
+        /// <summary>
+        /// Линия, показывающая текущее время
+        /// </summary>
+        public LineItem LineNow { 
+            get => _lineNow; 
+            set =>SetProperty(ref _lineNow,value); 
+        }
+        private LineItem _lineNow;
+
         /// <summary>
         /// Коллекция с вертикальными (часовыми)
         /// </summary>
@@ -90,6 +108,15 @@ namespace Planner.Module.Diagram.Models
             foreach (LineItem line in HourLines)
                 line.Y2 = y2;
         }
+        /// <summary>
+        /// Обновление координат линии реального времени
+        /// </summary>
+        public void UpdateLineNow()
+        {
+            
+            double y2 = Height - 20;
+            LineNow.Y2 = y2;
+        }
 
         /// <summary>
         /// Время, с которого начинается канвас
@@ -105,6 +132,7 @@ namespace Planner.Module.Diagram.Models
         /// Чему равно расстояние между двумя часовыми линиями в пикселях
         /// </summary>
         public double PixelsInHour { get; private set; }
+
 
         /// <summary>
         /// Метод создающий линии в заданом диапазоне
@@ -130,6 +158,23 @@ namespace Planner.Module.Diagram.Models
         }
 
         /// <summary>
+        /// Метод, создающий линию,показывающую реальное время
+        /// </summary>
+        void LineNowDraw(DateTime start,DateTime nowTime)
+        {
+            TimeStart = new DateTime(start.Year, start.Month, start.Day, start.Hour, 0, 0);
+            DateTime timeIterator = TimeStart;
+            double width = PixelsInHour;
+
+            //TimeSpan diff = nowTime.Subtract(TimeStart);
+            //width+= diff.TotalMinutes;
+
+            TimeSpan span = nowTime - TimeStart;
+            width= PixelsInHour * span.TotalSeconds / 3600;
+            LineNow = new LineItem(width, 0.0, width, Height,nowTime);
+
+        }
+        /// <summary>
         /// Агрегаторы
         /// </summary>
         public ObservableCollection<Agregator> Agregators
@@ -146,12 +191,14 @@ namespace Planner.Module.Diagram.Models
 
         public CanvasFiller()
         {
+            PixelsInHour = 60;
+            LineNowDraw(DateTime.Now.AddDays(-2),DateTime.Now);
             Height = 0;
             Width = 0;
 
-            PixelsInHour = 60;
 
             LinesDraw(DateTime.Now.AddDays(-2), DateTime.Now.AddDays(2));
+            
         }
     }
 }

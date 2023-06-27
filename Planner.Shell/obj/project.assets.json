@@ -1178,19 +1178,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Данил\\.nuget\\packages\\": {}
+    "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Shell\\Planner.Shell.csproj",
+      "projectUniqueName": "E:\\Учеба\\Практика_Северсталь\\Planner\\1\\Planner\\Planner.Shell\\Planner.Shell.csproj",
       "projectName": "Planner.Shell",
-      "projectPath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Shell\\Planner.Shell.csproj",
-      "packagesPath": "C:\\Users\\Данил\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Shell\\obj\\",
+      "projectPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\1\\Planner\\Planner.Shell\\Planner.Shell.csproj",
+      "packagesPath": "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\",
+      "outputPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\1\\Planner\\Planner.Shell\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Данил\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Дмитрий Вопиловский\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1198,14 +1203,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
-              "projectPath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj"
+            "E:\\Учеба\\Практика_Северсталь\\Planner\\1\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
+              "projectPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\1\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj"
             }
           }
         }

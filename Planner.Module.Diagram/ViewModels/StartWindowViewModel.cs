@@ -52,18 +52,9 @@ namespace Planner.Module.Diagram.ViewModels
             };
 
             Filler.Agregators = agregators;
+
         }
 
-        /// <summary>
-        /// Заголовок
-        /// </summary>
-        public string Header
-        {
-            get => _header;
-            set => SetProperty(ref _header, value);
-        }
-        private string _header;
-
-        public void RefreshHeader() => Header = "Всем привет! Это ПЛАНИРОВЩИК!" + Filler?.Height + " and " + Filler?.Width;
+        
     }
 }

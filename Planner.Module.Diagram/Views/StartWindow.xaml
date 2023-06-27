@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Planner.Module.Diagram.Views"
              xmlns:md="clr-namespace:Planner.Module.Diagram.Models"
              xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
-             xmlns:components="clr-namespace:Planner.Module.Diagram.Components"
+             xmlns:components="clr-namespace:Planner.Module.Diagram.Components" 
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
@@ -80,12 +80,12 @@
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <Line X1="{Binding X1}" 
+                            <Line X1="{Binding X1}" 
                                       Y1="{Binding Y1}" 
                                       X2="{Binding X2}" 
                                       Y2="{Binding Y2}" 
                                       Stroke="#b1b3b1" StrokeThickness="1"/>
-                            </DataTemplate>
+                        </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
 
@@ -110,7 +110,7 @@
                                                     }"/>
                                         </ItemsPanelTemplate>
                                     </ItemsControl.ItemsPanel>
-                                    
+
                                     <ItemsControl.ItemContainerStyle>
                                         <Style TargetType="ContentPresenter">
                                             <Setter Property="Canvas.Left" Value="{Binding CanvasLeft}"/>
@@ -122,14 +122,22 @@
                                             <components:Melting/>
                                         </DataTemplate>
                                     </ItemsControl.ItemTemplate>
-                                
+
                                 </ItemsControl>
-                                
+
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
+                    
                 </Canvas>
-                
+                <Canvas Width="{Binding Filler.Width}">
+                    <Line  
+                          X1="{Binding Filler.LineNow.X1}" 
+                          Y1="{Binding Filler.LineNow.Y1}"
+                          X2="{Binding Filler.LineNow.X2}" 
+                          Y2="{Binding Filler.LineNow.Y2}"
+                          Stroke="Red" StrokeThickness="1"/>
+                </Canvas>
             </Grid>
         </ScrollViewer>
         
