@@ -107,7 +107,13 @@
                                                     "{
                                                         Binding Path=(ItemsControl.AlternationIndex),
                                                         RelativeSource={RelativeSource TemplatedParent}
-                                                    }"/>
+                                                    }">
+                                                <behaviors:Interaction.Behaviors>
+                                                    <md:BindingToReadOnlyPropertyBehavior 
+                                                        Target="{Binding Height, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                                        Property="ActualHeight"/>
+                                                </behaviors:Interaction.Behaviors>
+                                            </Canvas>
                                         </ItemsPanelTemplate>
                                     </ItemsControl.ItemsPanel>
 

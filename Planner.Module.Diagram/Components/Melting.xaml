@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Planner.Module.Diagram.Components"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Green" Width="{Binding Width}">
+    <Grid Background="Green" Width="{Binding Width}" Height="{Binding Height}">
         
         <Grid.RowDefinitions>
             <RowDefinition/>

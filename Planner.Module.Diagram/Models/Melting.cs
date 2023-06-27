@@ -67,6 +67,9 @@ namespace Planner.Module.Diagram.Models
         public double Width { get => _width; set => SetProperty(ref _width, value); }
         private double _width;
 
+        public double Height { get => _height; set => SetProperty(ref _height, value); }
+        private double _height;
+
         private void UpdateWidth() => Width = ConvertTimeToCanvasLeft(End) - CanvasLeft;
 
         /// <summary>

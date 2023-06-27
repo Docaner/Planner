@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Учеба\\Практика_Северсталь\\Planner\\1\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {}
+    "C:\\Users\\ILYASLAV\\Desktop\\Planner\\1\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {}
   },
   "projects": {
-    "E:\\Учеба\\Практика_Северсталь\\Planner\\1\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
+    "C:\\Users\\ILYASLAV\\Desktop\\Planner\\1\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Учеба\\Практика_Северсталь\\Planner\\1\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+        "projectUniqueName": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\1\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
         "projectName": "Planner.Module.Diagram",
-        "projectPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\1\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
-        "packagesPath": "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\",
-        "outputPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\1\\Planner\\Planner.Module.Diagram\\obj\\",
+        "projectPath": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\1\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+        "packagesPath": "C:\\Users\\ILYASLAV\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\1\\Planner\\Planner.Module.Diagram\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Дмитрий Вопиловский\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ILYASLAV\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
