@@ -83,19 +83,6 @@ namespace Planner.Module.Diagram.Models
             HeightAgregator = MaxHeightAgregators / Agregators.Count;
         }*/
 
-
-
-
-
-        /// <summary>
-        /// Линия, показывающая текущее время
-        /// </summary>
-        public LineItem LineNow { 
-            get => _lineNow; 
-            set =>SetProperty(ref _lineNow,value); 
-        }
-        private LineItem _lineNow;
-
         /// <summary>
         /// Коллекция с вертикальными (часовыми)
         /// </summary>
@@ -123,9 +110,9 @@ namespace Planner.Module.Diagram.Models
         /// </summary>
         public void UpdateLineNow()
         {
-            
+            if (LineNow == null) return;
             double y2 = Height - 20;
-            LineNow.Y2 = y2;
+            LineNow.LineNow.Y2 = y2;
         }
 
         /// <summary>
@@ -165,24 +152,6 @@ namespace Planner.Module.Diagram.Models
             }
 
             Width = width;
-        }
-
-        /// <summary>
-        /// Метод, создающий линию,показывающую реальное время
-        /// </summary>
-        void LineNowDraw(DateTime start,DateTime nowTime)
-        {
-            TimeStart = new DateTime(start.Year, start.Month, start.Day, start.Hour, 0, 0);
-            DateTime timeIterator = TimeStart;
-            double width = PixelsInHour;
-
-            //TimeSpan diff = nowTime.Subtract(TimeStart);
-            //width+= diff.TotalMinutes;
-
-            TimeSpan span = nowTime - TimeStart;
-            width= PixelsInHour * span.TotalSeconds / 3600;
-            LineNow = new LineItem(width, 0.0, width, Height,nowTime);
-
         }
         /// <summary>
         /// Агрегаторы
@@ -285,10 +254,10 @@ namespace Planner.Module.Diagram.Models
             }
         }
 
+        public RealTimeLine LineNow { get; set; }
         public CanvasFiller()
         {
             PixelsInHour = 60;
-            LineNowDraw(DateTime.Now.AddDays(-2),DateTime.Now);
             Height = 0;
             Width = 0;
 

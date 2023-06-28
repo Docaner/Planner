@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "kBgv06ZW+LOayvkrA4KYgsIj9W5TyvgdHdBz6zn72NammzsSvho6sn5/HPQpqp2wjbs5OX4mDgE7BMgQH/gocw==",
+  "dgSpecHash": "MOEB8b8gC80ZEYQmFUJDXRLlcTQgenkhyIZ0AjdW0V7K0cYtdJjZuwmxPdad6lBejmzbStdBDIl05LvttF3CRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+  "projectFilePath": "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_3\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Данил\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
-    "C:\\Users\\Данил\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
-    "C:\\Users\\Данил\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
+    "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
   ],
   "logs": []
 }

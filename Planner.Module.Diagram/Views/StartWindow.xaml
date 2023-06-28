@@ -139,10 +139,10 @@
                 </Canvas>
                 <Canvas Width="{Binding Filler.Width}">
                     <Line  
-                          X1="{Binding Filler.LineNow.X1}" 
-                          Y1="{Binding Filler.LineNow.Y1}"
-                          X2="{Binding Filler.LineNow.X2}" 
-                          Y2="{Binding Filler.LineNow.Y2}"
+                          X1="{Binding Filler.LineNow.LineNow.X1}" 
+                          Y1="{Binding Filler.LineNow.LineNow.Y1}"
+                          X2="{Binding Filler.LineNow.LineNow.X2}" 
+                          Y2="{Binding Filler.LineNow.LineNow.Y2}"
                           Stroke="Red" StrokeThickness="1"/>
                 </Canvas>
 

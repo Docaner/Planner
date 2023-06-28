@@ -52,7 +52,7 @@ namespace Planner.Module.Diagram.ViewModels
             };
 
             Filler.Agregators = agregators;
-
+            Filler.LineNow = new RealTimeLine();
         }
 
         
