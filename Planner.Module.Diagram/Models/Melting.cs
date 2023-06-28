@@ -1,8 +1,10 @@
-﻿using Prism.Mvvm;
+﻿using Prism.Commands;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using System.Windows.Input;
 
 namespace Planner.Module.Diagram.Models
 {
@@ -95,12 +97,38 @@ namespace Planner.Module.Diagram.Models
             return ContextViewModel.StartWindow.Filler.PixelsInHour * span.TotalSeconds / 3600;
         }
 
+        /// <summary>
+        /// Событие MouseEnter
+        /// </summary>
+        public ICommand MouseEnter { get; }
+
+        public event Action<Melting> EventMouseEnter;
+
+        private void MouseEnterAct()
+        {
+            EventMouseEnter?.Invoke(this);
+        }
+        /// <summary>
+        /// Событие MouseLeave
+        /// </summary>
+        public ICommand MouseLeave { get; }
+
+        public event Action<Melting> EventMouseLeave;
+
+        private void MouseLeaveAct()
+        {
+            EventMouseLeave?.Invoke(this);
+        }
+
         public Melting(int id, DateTime start, DateTime end,string hex)
         {
             Id = id;
             Start = start;
             End = end;
             Hex = hex;
+
+            MouseEnter = new DelegateCommand(MouseEnterAct);
+            MouseLeave = new DelegateCommand(MouseLeaveAct);
         }
     }
 }

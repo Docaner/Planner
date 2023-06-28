@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Data;
+using System.Linq;
 using System.Text;
 
 namespace Planner.Module.Diagram.Models
@@ -193,10 +194,96 @@ namespace Planner.Module.Diagram.Models
             {
                 SetProperty(ref _agregators, value);
                 //UpdateHeightAgregator();
+                InitMeltingLines();
+                SubscribrMeltings();
             }
         }
 
         private ObservableCollection<Agregator> _agregators;
+
+        /// <summary>
+        /// Подписка на события Meltings
+        /// </summary>
+        private void SubscribrMeltings()
+        {
+            foreach (Agregator agr in Agregators)
+            {
+                foreach (Melting mel in agr.Meltings)
+                {
+                    mel.EventMouseEnter += DrawLinesToMeltings;
+                    mel.EventMouseLeave += LeaveMeltingsLines;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Коллекция линий, которые рисуются к сфокусированным плавкам
+        /// </summary>
+        public ObservableCollection<LineItem> MeltingLines { get => _meltingLines; set => SetProperty(ref _meltingLines, value); }
+        private ObservableCollection<LineItem> _meltingLines;
+
+        /// <summary>
+        /// Инициализация коллекции MeltingLines
+        /// </summary>
+        private void InitMeltingLines()
+        {
+            ObservableCollection<LineItem> lines = new ObservableCollection<LineItem>();
+            //Необходимо линий на 1 меньше, чем агрегаторов.
+            for (int i = 0; i < Agregators.Count - 1; i++) lines.Add(new LineItem(0, 0, 0, 0, DateTime.Now));
+            MeltingLines = lines;
+        }
+
+        /// <summary>
+        /// Рисует линии к указанной плавке в разных агрегаторах
+        /// </summary>
+        /// <param name="target">Melting, на который наведен курсор</param>
+        private void DrawLinesToMeltings(Melting target)
+        {
+            LeaveMeltingsLines(null);
+
+            Melting startDraw = Agregators[0].Meltings.FirstOrDefault(x => x.Id == target.Id);
+            Melting endDraw;
+
+            int indexLine = 0;
+            double y = Agregators[0].Height / 2;
+
+            for (int i = 1; i < Agregators.Count; i++)
+            {
+                endDraw = Agregators[i].Meltings.FirstOrDefault(x => x.Id == target.Id);
+
+                if (endDraw == null) continue;
+
+                if (startDraw != null)
+                {
+                    MeltingLines[indexLine].X1 = startDraw.CanvasLeft;
+                    MeltingLines[indexLine].Y1 = y;
+
+                    y += Agregators[i].Height;
+
+                    MeltingLines[indexLine].X2 = endDraw.CanvasLeft;
+                    MeltingLines[indexLine].Y2 = y;
+
+                    indexLine++;
+                }
+
+                startDraw = endDraw;
+            }
+        }
+
+        /// <summary>
+        /// Убирает линии проведённые к плавкам
+        /// </summary>
+        /// <param name="target">Плавка</param>
+        private void LeaveMeltingsLines(Melting target)
+        {
+            foreach (LineItem line in MeltingLines)
+            {
+                line.X1 = 0;
+                line.Y1 = 0;
+                line.X2 = 0;
+                line.Y2 = 0;
+            }
+        }
 
         public CanvasFiller()
         {
