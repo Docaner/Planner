@@ -18,7 +18,7 @@
             <ItemsControl ItemsSource="{Binding Filler.Agregators}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <UniformGrid Grid.Column="0" Columns="1" Height="{Binding Filler.Height}"/>
+                    <UniformGrid Grid.Column="0" Columns="1" Height="{Binding Filler.HeightUniformGrid}"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
@@ -93,7 +93,7 @@
                     <ItemsControl ItemsSource="{Binding Filler.Agregators}">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
-                                <UniformGrid Columns="1" Height="{Binding Filler.Height}"/>
+                                <UniformGrid Columns="1" Height="{Binding Filler.HeightUniformGrid}"/>
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.ItemTemplate>
@@ -120,6 +120,7 @@
                                     <ItemsControl.ItemContainerStyle>
                                         <Style TargetType="ContentPresenter">
                                             <Setter Property="Canvas.Left" Value="{Binding CanvasLeft}"/>
+                                            <Setter Property="Canvas.Top" Value="{Binding CanvasTop}"/>
                                         </Style>
                                     </ItemsControl.ItemContainerStyle>
 

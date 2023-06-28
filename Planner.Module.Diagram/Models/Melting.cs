@@ -1,6 +1,7 @@
 ﻿using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace Planner.Module.Diagram.Models
@@ -24,6 +25,7 @@ namespace Planner.Module.Diagram.Models
                 _start = value;
                 UpdateStartStringFormat();
                 UpdateCanvasLeft();
+                UpdateCanvasTop();
             }
         }
         private DateTime _start;
@@ -61,13 +63,18 @@ namespace Planner.Module.Diagram.Models
 
         private void UpdateCanvasLeft() => CanvasLeft = ConvertTimeToCanvasLeft(Start);
 
+        public double CanvasTop { get => _canvasTop; set => SetProperty(ref _canvasTop, value); }
+        private double _canvasTop;
+
+        private void UpdateCanvasTop() { CanvasTop = 5; Trace.WriteLine(_height); }
+
         /// <summary>
         /// Ширина блока
         /// </summary>
         public double Width { get => _width; set => SetProperty(ref _width, value); }
         private double _width;
 
-        public double Height { get => _height; set => SetProperty(ref _height, value); }
+        public double Height { get => _height; set => SetProperty(ref _height, value*0.9); }
         private double _height;
 
         private void UpdateWidth() => Width = ConvertTimeToCanvasLeft(End) - CanvasLeft;

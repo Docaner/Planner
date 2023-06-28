@@ -37,13 +37,22 @@ namespace Planner.Module.Diagram.Models
                 
                 UpdateHourLines();
                 UpdateLineNow();
+                HeightUniformGrid = _height - 20;
                 //UpdateMaxHeightAgregators();
             }
         }
         private double _height;
 
-
-
+        public double HeightUniformGrid
+        {
+            get => _heightUniformGrid;
+            set
+            {
+                if (value < 0) return;
+                SetProperty(ref _heightUniformGrid, value);
+            }
+        }
+        private double _heightUniformGrid;
         /*
         /// <summary>
         /// Высота поля с агрегаторами
