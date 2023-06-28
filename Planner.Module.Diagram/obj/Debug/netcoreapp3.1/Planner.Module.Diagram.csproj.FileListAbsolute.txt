@@ -20,12 +20,10 @@ H:\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Planner.Module
 H:\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.dll
 H:\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.pdb
 H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.csproj.AssemblyReference.cache
-H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Components\Plavka.g.cs
 H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Views\StartWindow.g.cs
 H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram_MarkupCompile.cache
 H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram_MarkupCompile.lref
-H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Components\Plavka.baml
 H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Views\StartWindow.baml
 H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.g.resources
 H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.GeneratedMSBuildEditorConfig.editorconfig
@@ -34,8 +32,6 @@ H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module
 H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.csproj.CoreCompileInputs.cache
 H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.dll
 H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.pdb
-H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Components\Agregotorses.g.cs
-H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Components\Agregotorses.baml
 D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.deps.json
 D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.dll
 D:\Other\Данил\ЧГУ\Planner\Planner\Planner.Module.Diagram\bin\Debug\netcoreapp3.1\Planner.Module.Diagram.pdb
@@ -112,3 +108,5 @@ C:\Users\ILYASLAV\Desktop\Planner\1\Planner\Planner.Module.Diagram\obj\Debug\net
 C:\Users\ILYASLAV\Desktop\Planner\1\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.csproj.CoreCompileInputs.cache
 C:\Users\ILYASLAV\Desktop\Planner\1\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.dll
 C:\Users\ILYASLAV\Desktop\Planner\1\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.pdb
+H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Components\Melting.g.cs
+H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Components\Melting.baml

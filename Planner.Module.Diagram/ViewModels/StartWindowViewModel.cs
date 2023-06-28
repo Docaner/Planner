@@ -24,9 +24,9 @@ namespace Planner.Module.Diagram.ViewModels
                     "Agr1",
                     new ObservableCollection<Melting>()
                     {
-                        new Melting(1, DateTime.Now.AddDays(-2).AddHours(1), DateTime.Now.AddDays(-2).AddHours(3)),
-                        new Melting(2, DateTime.Now.AddDays(-2).AddHours(4), DateTime.Now.AddDays(-2).AddHours(6)),
-                        new Melting(3, DateTime.Now.AddDays(-2).AddHours(7), DateTime.Now.AddDays(-2).AddHours(9))
+                        new Melting(1, DateTime.Now.AddDays(-2).AddHours(1), DateTime.Now.AddDays(-2).AddHours(3),"#ADFF2F"),
+                        new Melting(2, DateTime.Now.AddDays(-2).AddHours(4), DateTime.Now.AddDays(-2).AddHours(6),"#8B0000"),
+                        new Melting(3, DateTime.Now.AddDays(-2).AddHours(7), DateTime.Now.AddDays(-2).AddHours(9),"#ADFF2F")
                     }
                 ),
                 new Agregator
@@ -34,9 +34,9 @@ namespace Planner.Module.Diagram.ViewModels
                     "Agr2",
                     new ObservableCollection<Melting>()
                     {
-                        new Melting(123, DateTime.Now.AddDays(-2).AddHours(0), DateTime.Now.AddDays(-2).AddHours(2)),
-                        new Melting(124, DateTime.Now.AddDays(-2).AddHours(3), DateTime.Now.AddDays(-2).AddHours(5)),
-                        new Melting(125, DateTime.Now.AddDays(-2).AddHours(8), DateTime.Now.AddDays(-2).AddHours(10))
+                        new Melting(123, DateTime.Now.AddDays(-2).AddHours(0), DateTime.Now.AddDays(-2).AddHours(2), "#ADFF2F"),
+                        new Melting(124, DateTime.Now.AddDays(-2).AddHours(3), DateTime.Now.AddDays(-2).AddHours(5), "#1E90FF"),
+                        new Melting(125, DateTime.Now.AddDays(-2).AddHours(8), DateTime.Now.AddDays(-2).AddHours(10), "#ADFF2F")
                     }
                 ),
                 new Agregator
@@ -44,9 +44,9 @@ namespace Planner.Module.Diagram.ViewModels
                     "Agr3",
                     new ObservableCollection<Melting>()
                     {
-                        new Melting(556, DateTime.Now.AddDays(-2).AddHours(3), DateTime.Now.AddDays(-2).AddHours(6)),
-                        new Melting(665, DateTime.Now.AddDays(-2).AddHours(7), DateTime.Now.AddDays(-2).AddHours(10)),
-                        new Melting(777, DateTime.Now.AddDays(-2).AddHours(11), DateTime.Now.AddDays(-2).AddHours(13))
+                        new Melting(556, DateTime.Now.AddDays(-2).AddHours(3), DateTime.Now.AddDays(-2).AddHours(6), "#ADFF2F"),
+                        new Melting(665, DateTime.Now.AddDays(-2).AddHours(7), DateTime.Now.AddDays(-2).AddHours(10), "#FFFF00"),
+                        new Melting(777, DateTime.Now.AddDays(-2).AddHours(11), DateTime.Now.AddDays(-2).AddHours(13), "#ADFF2F")
                     }
                 ),
             };

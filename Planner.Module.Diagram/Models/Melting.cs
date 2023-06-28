@@ -8,6 +8,11 @@ namespace Planner.Module.Diagram.Models
 {
     public class Melting : BindableBase
     {
+        private string _hex;
+        public string Hex
+        {
+            get => _hex;set => SetProperty(ref _hex, value);
+        }
         /// <summary>
         /// Номер плавки
         /// </summary>
@@ -90,11 +95,12 @@ namespace Planner.Module.Diagram.Models
             return ContextViewModel.StartWindow.Filler.PixelsInHour * span.TotalSeconds / 3600;
         }
 
-        public Melting(int id, DateTime start, DateTime end)
+        public Melting(int id, DateTime start, DateTime end,string hex)
         {
             Id = id;
             Start = start;
             End = end;
+            Hex = hex;
         }
     }
 }
