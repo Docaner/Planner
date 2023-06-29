@@ -18,7 +18,10 @@
             <ItemsControl ItemsSource="{Binding Filler.Agregators}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                    <UniformGrid Grid.Column="0" Columns="1" Height="{Binding Filler.HeightUniformGrid}"/>
+                        <UniformGrid Grid.Column="0" 
+                                     Columns="1"
+                                     VerticalAlignment="Top"
+                                     Height="{Binding Filler.HeightUniformGrid}"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>

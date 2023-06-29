@@ -14,8 +14,9 @@ namespace Planner.Module.Diagram.ViewModels
 
         public StartWindowViewModel()
         {
-            ContextViewModel.StartWindow = this;
-            Filler = new CanvasFiller();
+            CanvasSettings settings = new CanvasSettings(60);
+
+            Filler = new CanvasFiller(settings);
 
             ObservableCollection<Agregator> agregators = new ObservableCollection<Agregator>()
             {
@@ -24,9 +25,9 @@ namespace Planner.Module.Diagram.ViewModels
                     "Agr1",
                     new ObservableCollection<Melting>()
                     {
-                        new Melting(1, DateTime.Now.AddDays(-2).AddHours(1), DateTime.Now.AddDays(-2).AddHours(3),"#ADFF2F"),
-                        new Melting(2, DateTime.Now.AddDays(-2).AddHours(4), DateTime.Now.AddDays(-2).AddHours(6),"#8B0000"),
-                        new Melting(3, DateTime.Now.AddDays(-2).AddHours(7), DateTime.Now.AddDays(-2).AddHours(9),"#ADFF2F")
+                        new Melting(1, DateTime.Now.AddHours(-1), DateTime.Now.AddHours(3),"#ADFF2F", settings),
+                        new Melting(2, DateTime.Now.AddHours(4), DateTime.Now.AddHours(6),"#8B0000", settings),
+                        new Melting(3, DateTime.Now.AddHours(7), DateTime.Now.AddHours(9),"#ADFF2F", settings)
                     }
                 ),
                 new Agregator
@@ -34,9 +35,9 @@ namespace Planner.Module.Diagram.ViewModels
                     "Agr2",
                     new ObservableCollection<Melting>()
                     {
-                        new Melting(1, DateTime.Now.AddDays(-2).AddHours(0), DateTime.Now.AddDays(-2).AddHours(2), "#ADFF2F"),
-                        new Melting(2, DateTime.Now.AddDays(-2).AddHours(3), DateTime.Now.AddDays(-2).AddHours(5), "#1E90FF"),
-                        new Melting(3, DateTime.Now.AddDays(-2).AddHours(8), DateTime.Now.AddDays(-2).AddHours(10), "#ADFF2F")
+                        new Melting(1, DateTime.Now.AddHours(0), DateTime.Now.AddHours(2), "#ADFF2F", settings),
+                        new Melting(2, DateTime.Now.AddHours(3), DateTime.Now.AddHours(5), "#1E90FF", settings),
+                        new Melting(3, DateTime.Now.AddHours(8), DateTime.Now.AddHours(10), "#ADFF2F", settings)
                     }
                 ),
                 new Agregator
@@ -44,15 +45,14 @@ namespace Planner.Module.Diagram.ViewModels
                     "Agr3",
                     new ObservableCollection<Melting>()
                     {
-                        new Melting(1, DateTime.Now.AddDays(-2).AddHours(3), DateTime.Now.AddDays(-2).AddHours(6), "#ADFF2F"),
-                        new Melting(2, DateTime.Now.AddDays(-2).AddHours(7), DateTime.Now.AddDays(-2).AddHours(10), "#FFFF00"),
-                        new Melting(3, DateTime.Now.AddDays(-2).AddHours(11), DateTime.Now.AddDays(-2).AddHours(13), "#ADFF2F")
+                        new Melting(1, DateTime.Now.AddHours(3), DateTime.Now.AddHours(6), "#ADFF2F", settings),
+                        new Melting(2, DateTime.Now.AddHours(7), DateTime.Now.AddHours(10), "#FFFF00", settings),
+                        new Melting(3, DateTime.Now.AddHours(11), DateTime.Now.AddHours(13), "#ADFF2F", settings)
                     }
                 ),
             };
 
             Filler.Agregators = agregators;
-            Filler.LineNow = new RealTimeLine();
         }
 
         

@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\ILYASLAV\Desktop\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\
+C:\Users\Данил\Desktop\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\
 Planner.Module.Diagram
 none
 false
@@ -12,9 +12,9 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 
 2-1027237365
 
-13-429261617
-1951037028056
+13-98772707
+1951991090705
 Components\Melting.xaml;Views\StartWindow.xaml;
 
-True
+False
 

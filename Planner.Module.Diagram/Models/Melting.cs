@@ -68,7 +68,7 @@ namespace Planner.Module.Diagram.Models
         public double CanvasLeft { get => _canvasLeft; set => SetProperty(ref _canvasLeft, value); }
         private double _canvasLeft;
 
-        private void UpdateCanvasLeft() => CanvasLeft = ConvertTimeToCanvasLeft(Start);
+        public void UpdateCanvasLeft() => CanvasLeft = _settings.ConvertTimeToCanvasLeft(Start);
 
         public double CanvasTop { get => _canvasTop; set => SetProperty(ref _canvasTop, value); }
         private double _canvasTop;
@@ -80,22 +80,14 @@ namespace Planner.Module.Diagram.Models
         /// </summary>
         public double Width { get => _width; set => SetProperty(ref _width, value); }
         private double _width;
-
-        public double Height { get => _height; set => SetProperty(ref _height, value*0.9); }
-        private double _height;
-
-        private void UpdateWidth() => Width = ConvertTimeToCanvasLeft(End) - CanvasLeft;
+        
+        private void UpdateWidth() => Width = _settings.ConvertTimeToCanvasLeft(End) - CanvasLeft;
 
         /// <summary>
-        /// Конвертация времени в CanvasLeft
+        /// Высота плавки 
         /// </summary>
-        /// <param name="time">Время</param>
-        /// <returns>Отступ CanvasLeft</returns>
-        private double ConvertTimeToCanvasLeft(DateTime time)
-        {
-            TimeSpan span = time - ContextViewModel.StartWindow.Filler.TimeStart; 
-            return ContextViewModel.StartWindow.Filler.PixelsInHour * span.TotalSeconds / 3600;
-        }
+        public double Height { get => _height; set => SetProperty(ref _height, value); }
+        private double _height;
 
         /// <summary>
         /// Событие MouseEnter
@@ -120,8 +112,14 @@ namespace Planner.Module.Diagram.Models
             EventMouseLeave?.Invoke(this);
         }
 
-        public Melting(int id, DateTime start, DateTime end,string hex)
+        /// <summary>
+        /// Данные о канвас
+        /// </summary>
+        private CanvasSettings _settings;
+
+        public Melting(int id, DateTime start, DateTime end, string hex, CanvasSettings settings)
         {
+            _settings = settings;
             Id = id;
             Start = start;
             End = end;

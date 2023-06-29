@@ -14,13 +14,16 @@ namespace Planner.Module.Diagram.Models
         public string Name { get => _name; set => SetProperty(ref _name, value); }
         private string _name;
 
+        /// <summary>
+        /// Высота агрегатора
+        /// </summary>
         public double Height
         {
             get => _height;
             set
             {
                 SetProperty(ref _height, value);
-                UpdateHeightMeltings(value);
+                UpdateHeightMeltings();
             }
         }
         private double _height;
@@ -31,12 +34,15 @@ namespace Planner.Module.Diagram.Models
         public ObservableCollection<Melting> Meltings { get => _meltings; private set => SetProperty(ref _meltings, value); }
         private ObservableCollection<Melting> _meltings;
 
-        public void UpdateHeightMeltings(double height)
+        /// <summary>
+        /// Обновление высоты плавки
+        /// </summary>
+        /// <param name="height"></param>
+        public void UpdateHeightMeltings()
         {
+            double melHeight = Height * 0.9;
             foreach (var melting in Meltings)
-            {
-                melting.Height = height;
-            }
+                melting.Height = melHeight;
         }
 
         public Agregator(string name, ObservableCollection<Melting> meltings)

@@ -7,7 +7,6 @@ namespace Planner.Module.Diagram.Models
 {
     public class LineItem : BindableBase
     {
-
         public double X1 { get => _x1; set => SetProperty(ref _x1, value); }
         private double _x1;
 

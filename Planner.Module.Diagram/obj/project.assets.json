@@ -138,19 +138,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ILYASLAV\\.nuget\\packages\\": {}
+    "C:\\Users\\Данил\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+      "projectUniqueName": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
       "projectName": "Planner.Module.Diagram",
-      "projectPath": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
-      "packagesPath": "C:\\Users\\ILYASLAV\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner\\Planner.Module.Diagram\\obj\\",
+      "projectPath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+      "packagesPath": "C:\\Users\\Данил\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ILYASLAV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Данил\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -200,7 +200,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

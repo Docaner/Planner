@@ -1,6 +1,7 @@
 ﻿using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
+using System.Runtime;
 using System.Text;
 using System.Windows.Media.Media3D;
 using System.Windows.Threading;
@@ -13,27 +14,31 @@ namespace Planner.Module.Diagram.Models
         /// Линия, показывающая реальное время
         /// </summary>
         public LineItem LineNow { get; set; }
-        private LineItem _lineNow;
+
         /// <summary>
         /// Таймер
         /// </summary>
         private DispatcherTimer timer;
-        public RealTimeLine()
+
+        /// <summary>
+        /// Настройка канваса
+        /// </summary>
+        private CanvasSettings _settings;
+
+        public RealTimeLine(CanvasSettings settings, double height)
         {
-            LineNowDraw1(DateTime.Now.AddDays(-2), DateTime.Now);
+            _settings = settings;
+
+            LineNowInit(height);
             startTimer();
         }
         /// <summary>
         /// Метод, определяющий координаты линии, показывающей реальное время
         /// </summary>
-        /// <param name="start">Время, с которого начинается canvas</param>
-        /// <param name="nowTime">Текущее время</param>
-        public void LineNowDraw1(DateTime start, DateTime nowTime)
+        public void LineNowInit(double height)
         {
-            TimeSpan span = nowTime - ContextViewModel.StartWindow.Filler.TimeStart;
-            double width = ContextViewModel.StartWindow.Filler.PixelsInHour * span.TotalSeconds / 3600;
-
-            LineNow = new LineItem(width, 0.0, width, ContextViewModel.StartWindow.Filler.Height, nowTime);
+            double width = _settings.ConvertTimeToCanvasLeft(DateTime.Now);
+            LineNow = new LineItem(width, 0.0, width, height, DateTime.Now);
         }
 
         public void startTimer()
@@ -44,10 +49,10 @@ namespace Planner.Module.Diagram.Models
             timer.Interval = TimeSpan.FromMinutes(1);
             timer.Start();
         }
+
         void timerTick(object sender, EventArgs e)
         {
-            TimeSpan span = DateTime.Now - ContextViewModel.StartWindow.Filler.TimeStart;
-            double width = ContextViewModel.StartWindow.Filler.PixelsInHour * span.TotalSeconds / 3600;
+            double width = _settings.ConvertTimeToCanvasLeft(DateTime.Now);
             LineNow.X1 = width;
             LineNow.X2 = width;
         }

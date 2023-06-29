@@ -35,7 +35,7 @@ namespace Planner.Module.Diagram.Models
             set
             {
                 SetProperty(ref _height, value);
-                
+
                 UpdateHourLines();
                 UpdateLineNow();
                 HeightUniformGrid = _height - 20;
@@ -115,40 +115,27 @@ namespace Planner.Module.Diagram.Models
             LineNow.LineNow.Y2 = y2;
         }
 
-        /// <summary>
-        /// Время, с которого начинается канвас
-        /// </summary>
-        public DateTime TimeStart { get; private set; }
-
-        /// <summary>
-        /// Время, до которого заканчивается рисоваться канвас
-        /// </summary>
-        public DateTime TimeEnd { get; private set; }
-
-        /// <summary>
-        /// Чему равно расстояние между двумя часовыми линиями в пикселях
-        /// </summary>
-        public double PixelsInHour { get; private set; }
-
 
         /// <summary>
         /// Метод создающий линии в заданом диапазоне
         /// </summary>
         void LinesDraw(DateTime start, DateTime end)
         {
-            TimeStart = new DateTime(start.Year, start.Month, start.Day, start.Hour, 0, 0);
-            TimeEnd = end;
+            _settings.TimeStart = new DateTime(start.Year, start.Month, start.Day, start.Hour, 0, 0);
+            _settings.TimeEnd = end;
+
+            LineNowInit();
 
             HourLines = new ObservableCollection<LineItem>();
 
-            DateTime timeIterator = TimeStart;
-            double width = PixelsInHour;
+            DateTime timeIterator = _settings.TimeStart;
+            double width = _settings.PixelsInHour;
 
             while (timeIterator < end)
             {
                 timeIterator = timeIterator.AddHours(1);
                 HourLines.Add(new LineItem(width, 0.0, width, Height, timeIterator));
-                width += PixelsInHour;
+                width += _settings.PixelsInHour;
             }
 
             Width = width;
@@ -165,12 +152,25 @@ namespace Planner.Module.Diagram.Models
                 //UpdateHeightAgregator();
                 InitMeltingLines();
                 SubscribrMeltings();
-
-                DateTime min, max;
-                FindMinMaxTimeMeltings(out min, out max);
-                LinesDraw(min, max);
+                ReDrawLines();
+                UpdateMeltings();
             }
         }
+
+        private void ReDrawLines()
+        {
+            DateTime min, max;
+            FindMinMaxTimeMeltings(out min, out max);
+            LinesDraw(min.AddHours(-1), max.AddHours(1));
+        }
+
+        private void UpdateMeltings()
+        {
+            foreach (Agregator agregator in Agregators)
+                foreach (Melting melting in agregator.Meltings)
+                    melting.UpdateCanvasLeft();
+        }
+
 
         private ObservableCollection<Agregator> _agregators;
 
@@ -281,17 +281,26 @@ namespace Planner.Module.Diagram.Models
                 line.Y2 = 0;
             }
         }
+        /// <summary>
+        /// Линия реального времени
+        /// </summary>
+        public RealTimeLine LineNow { get; private set; }
 
-        public RealTimeLine LineNow { get; set; }
-        public CanvasFiller()
+        private void LineNowInit() => LineNow = new RealTimeLine(_settings, Height);
+
+        /// <summary>
+        /// Настройки канваса
+        /// </summary>
+        private CanvasSettings _settings;
+
+        public CanvasFiller(CanvasSettings settings)
         {
-            PixelsInHour = 60;
+            _settings = settings;
             Height = 0;
             Width = 0;
 
-
-            LinesDraw(DateTime.Now.AddDays(-2), DateTime.Now.AddDays(2));
-            
+            LinesDraw(_settings.TimeStart, _settings.TimeEnd);
+            LineNowInit();
         }
     }
 }
