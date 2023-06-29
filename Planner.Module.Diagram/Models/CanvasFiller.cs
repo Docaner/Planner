@@ -165,6 +165,10 @@ namespace Planner.Module.Diagram.Models
                 //UpdateHeightAgregator();
                 InitMeltingLines();
                 SubscribrMeltings();
+
+                DateTime min, max;
+                FindMinMaxTimeMeltings(out min, out max);
+                LinesDraw(min, max);
             }
         }
 
@@ -181,6 +185,30 @@ namespace Planner.Module.Diagram.Models
                 {
                     mel.EventMouseEnter += DrawLinesToMeltings;
                     mel.EventMouseLeave += LeaveMeltingsLines;
+                }
+            }
+        }
+        /// <summary>
+        /// Поиск минимального и максимального времени плавок
+        /// </summary>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
+        private void FindMinMaxTimeMeltings(out DateTime min, out DateTime max)
+        {
+            min = Agregators[0].Meltings[0].Start;
+            max = Agregators[0].Meltings[0].Start;
+            foreach (Agregator agr in Agregators)
+            {
+                foreach (Melting mel in agr.Meltings)
+                {
+                    if (mel.Start < min)
+                    {
+                        min = mel.Start;
+                    }
+                    if (mel.End > max)
+                    {
+                        max = mel.End;
+                    }
                 }
             }
         }

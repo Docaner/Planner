@@ -1178,24 +1178,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ILYASLAV\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_3\\Planner\\Planner.Shell\\Planner.Shell.csproj",
+      "projectUniqueName": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
       "projectName": "Planner.Shell",
-      "projectPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_3\\Planner\\Planner.Shell\\Planner.Shell.csproj",
-      "packagesPath": "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\",
-      "outputPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_3\\Planner\\Planner.Shell\\obj\\",
+      "projectPath": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
+      "packagesPath": "C:\\Users\\ILYASLAV\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner\\Planner.Shell\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Дмитрий Вопиловский\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ILYASLAV\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1203,15 +1198,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_3\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
-              "projectPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_3\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj"
+            "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
+              "projectPath": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj"
             }
           }
         }
@@ -1262,7 +1256,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
