@@ -18,6 +18,19 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Prism.Core/8.1.97": {
         "type": "package",
         "compile": {
@@ -79,6 +92,36 @@
         "tools/Install.ps1"
       ]
     },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "Prism.Core/8.1.97": {
       "sha512": "EP5zrvWddw3eSq25Y7hHnDYdmLZEC2Z/gMrvmHzUuLbitmA1UaS7wQUlSwNr9Km8lzJNCvytFnaGBEFukHgoHg==",
       "type": "package",
@@ -134,23 +177,24 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Newtonsoft.Json >= 13.0.3",
       "Prism.Wpf >= 8.1.97"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Данил\\.nuget\\packages\\": {}
+    "C:\\Users\\ILYASLAV\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+      "projectUniqueName": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
       "projectName": "Planner.Module.Diagram",
-      "projectPath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
-      "packagesPath": "C:\\Users\\Данил\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\obj\\",
+      "projectPath": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+      "packagesPath": "C:\\Users\\ILYASLAV\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner.Module.Diagram\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Данил\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ILYASLAV\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -176,6 +220,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
           "Prism.Wpf": {
             "target": "Package",
             "version": "[8.1.97, )"
@@ -200,7 +248,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

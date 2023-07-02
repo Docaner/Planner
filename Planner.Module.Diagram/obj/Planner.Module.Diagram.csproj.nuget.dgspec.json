@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {}
+    "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
+    "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+        "projectUniqueName": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
         "projectName": "Planner.Module.Diagram",
-        "projectPath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
-        "packagesPath": "C:\\Users\\Данил\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\obj\\",
+        "projectPath": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+        "packagesPath": "C:\\Users\\ILYASLAV\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ILYASLAV\\Desktop\\Planner\\Planner.Module.Diagram\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Данил\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ILYASLAV\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Prism.Wpf": {
               "target": "Package",
               "version": "[8.1.97, )"
@@ -64,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
