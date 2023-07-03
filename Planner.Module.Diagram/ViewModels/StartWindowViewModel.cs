@@ -14,7 +14,7 @@ namespace Planner.Module.Diagram.ViewModels
 
         public StartWindowViewModel()
         {
-            CanvasSettings settings = new CanvasSettings(60);
+            CanvasSettings settings = new CanvasSettings(300);
 
             Filler = new CanvasFiller(settings);
 

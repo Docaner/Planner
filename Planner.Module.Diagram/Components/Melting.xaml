@@ -8,6 +8,7 @@
                           xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <Border>
     <Grid  Width="{Binding Width}" Height="{Binding Height}">
 
         <i:Interaction.Triggers>
@@ -44,4 +45,5 @@
                    VerticalAlignment="Center" 
                    Text="{Binding StringFormat='Конец: {0}', Path=EndStringFormat}"/>
     </Grid>
+    </Border>
 </UserControl>

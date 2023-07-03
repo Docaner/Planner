@@ -333,3 +333,4 @@ C:\Users\ILYASLAV\Desktop\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.
 C:\Users\ILYASLAV\Desktop\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.pdb
 C:\Users\ILYASLAV\Desktop\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.genruntimeconfig.cache
 C:\Users\ILYASLAV\Desktop\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+H:\Planner\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

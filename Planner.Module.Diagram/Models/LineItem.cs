@@ -55,10 +55,11 @@ namespace Planner.Module.Diagram.Models
 
         private void ChangeTimeStringFormat()
         {
-            if (Time.Hour == 0)
+            if (Time.Hour == 0 && Time.Minute==0)
                 TimeStringFormat = Time.ToString("dd MMM");
-            else
+            else if (Time.Minute == 0)
                 TimeStringFormat = Time.ToString("HH:mm");
+          
 
         }
 
@@ -68,6 +69,7 @@ namespace Planner.Module.Diagram.Models
             Y1 = y1;
             X2 = x2;
             Y2 = y2;
+            
             Time = time;
         }
     }

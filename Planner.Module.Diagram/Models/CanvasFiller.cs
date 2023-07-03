@@ -92,8 +92,9 @@ namespace Planner.Module.Diagram.Models
             set => SetProperty(ref _hourLines, value);
         }
 
-        private ObservableCollection<LineItem> _hourLines;
 
+        private ObservableCollection<LineItem> _hourLines;
+  
         /// <summary>
         /// Обновление координат часовых линий
         /// </summary>
@@ -102,9 +103,22 @@ namespace Planner.Module.Diagram.Models
             if (HourLines == null) return;
 
             double y2 = Height - 20;
+            double y1 = Height + 440;
+            int z = 1;
             foreach (LineItem line in HourLines)
-                line.Y2 = y2;
+            { if (z % 6 != 0)
+                {
+                    line.Y2 = y2+10;
+                    line.Y1 = y1;
+                }
+            else {  line.Y2 = y2;
+                    line.Y1 = y1;
+                }
+                z++;
+            }
+                
         }
+        
         /// <summary>
         /// Обновление координат линии реального времени
         /// </summary>
@@ -127,18 +141,26 @@ namespace Planner.Module.Diagram.Models
             LineNowInit();
 
             HourLines = new ObservableCollection<LineItem>();
+         
 
             DateTime timeIterator = _settings.TimeStart;
-            double width = _settings.PixelsInHour;
+            double width = _settings.PixelsInHour/6;
+           
 
             while (timeIterator < end)
             {
-                timeIterator = timeIterator.AddHours(1);
-                HourLines.Add(new LineItem(width, 0.0, width, Height, timeIterator));
-                width += _settings.PixelsInHour;
+               
+                timeIterator = timeIterator.AddMinutes(10);
+               
+                HourLines.Add(new LineItem(width, Height+440 , width, Height, timeIterator));
+                width += _settings.PixelsInHour/6;
+                
             }
 
             Width = width;
+           
+           
+
         }
         /// <summary>
         /// Агрегаторы

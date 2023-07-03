@@ -65,6 +65,9 @@
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding TimeStringFormat}">
+                                <TextBlock.LayoutTransform>
+                                    <RotateTransform Angle="90" />
+                                </TextBlock.LayoutTransform>  
                                 <behaviors:Interaction.Behaviors>
                                     <md:BindingToReadOnlyPropertyBehavior 
                                         Target="{Binding TextWidth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
