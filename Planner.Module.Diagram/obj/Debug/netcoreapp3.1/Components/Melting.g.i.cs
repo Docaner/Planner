@@ -67,7 +67,7 @@ namespace Planner.Module.Diagram.Components {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Planner.Module.Diagram;component/components/melting.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Planner.Module.Diagram;V1.0.0.0;component/components/melting.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Components\Melting.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
