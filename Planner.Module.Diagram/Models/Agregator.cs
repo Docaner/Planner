@@ -22,7 +22,7 @@ namespace Planner.Module.Diagram.Models
             get => _height;
             set
             {
-                if (value <= 0) return;
+                if (value < 0) return;
                 SetProperty(ref _height, value);
                 UpdateHeightMeltings();
             }
