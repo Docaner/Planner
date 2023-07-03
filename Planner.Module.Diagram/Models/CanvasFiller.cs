@@ -7,6 +7,7 @@ using System.ComponentModel.Design;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Windows.Shapes;
 
 namespace Planner.Module.Diagram.Models
 {
@@ -37,9 +38,14 @@ namespace Planner.Module.Diagram.Models
             {
                 SetProperty(ref _height, value);
 
-                UpdateHourLines();
+                UpdateLines();
                 UpdateLineNow();
-                HeightUniformGrid = _height - 20;
+                if (Lines != null)
+                {
+                    Lines.Y1 = Height - 64;
+                    Lines.Y2 = Height - 64;
+                }
+                HeightUniformGrid = _height - 90;
                 //UpdateMaxHeightAgregators();
             }
         }
@@ -95,42 +101,54 @@ namespace Planner.Module.Diagram.Models
 
 
         private ObservableCollection<LineItem> _hourLines;
-  
+
         /// <summary>
         /// Обновление координат часовых линий
         /// </summary>
-        public void UpdateHourLines()
+        public void UpdateLines()
         {
             if (HourLines == null) return;
 
-            double y2 = Height - 20;
-            double y1 = Height + 440;
+            double y2 = Height - 74;
+            double y1 = Height - 56;
             int z = 1;
             foreach (LineItem line in HourLines)
-            { if (z % 6 != 0)
+            {
+                if (z % 6 != 0)
                 {
-                    line.Y2 = y2+10;
+                    line.Y2 = y2 + 3;
                     line.Y1 = y1;
+
                 }
-            else {  line.Y2 = y2;
-                    line.Y1 = y1;
+                else
+                {
+                    line.Y2 = y2;
+                    line.Y1 = y1 + 3;
+
                 }
+
+                line.X1Text = Height - 50;
                 z++;
             }
-                
+
         }
-        
+
         /// <summary>
         /// Обновление координат линии реального времени
         /// </summary>
         public void UpdateLineNow()
         {
             if (LineNow == null) return;
-            double y2 = Height - 20;
+            double y2 = Height - 64;
             LineNow.LineNow.Y2 = y2;
         }
 
+        private CanvasLine lines;
+        public CanvasLine Lines
+        {
+            get => lines; set => SetProperty(ref lines, value);
 
+        }
         /// <summary>
         /// Метод создающий линии в заданом диапазоне
         /// </summary>
@@ -142,25 +160,26 @@ namespace Planner.Module.Diagram.Models
             LineNowInit();
 
             HourLines = new ObservableCollection<LineItem>();
-         
+
 
             DateTime timeIterator = _settings.TimeStart;
-            double width = _settings.PixelsInHour/6;
-           
+            double width = _settings.PixelsInHour / 6;
+
 
             while (timeIterator < end)
             {
-               
+
                 timeIterator = timeIterator.AddMinutes(10);
-               
-                HourLines.Add(new LineItem(width, Height+440 , width, Height, timeIterator));
-                width += _settings.PixelsInHour/6;
-                
+
+                HourLines.Add(new LineItem(width, Height + 440, width, Height, timeIterator));
+                width += _settings.PixelsInHour / 6;
+
             }
+            Lines = new CanvasLine(0.0, Height - 70, width, Height - 70);
 
             Width = width;
-           
-           
+
+
 
         }
         /// <summary>

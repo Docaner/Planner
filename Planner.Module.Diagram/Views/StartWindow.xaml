@@ -66,23 +66,27 @@
                         </ItemsPanelTemplate>    
                     </ItemsControl.ItemsPanel>
                         <ItemsControl.ItemContainerStyle>
-                            <Style TargetType="ContentPresenter">
-                                <Setter Property="Canvas.Left" Value="{Binding X2Text}"/>
-                                <Setter Property="Canvas.Top" Value="{Binding Y2}"/>
-                            </Style>
-                        </ItemsControl.ItemContainerStyle>
+                        <Style TargetType="ContentPresenter">
+                            <Setter Property="Canvas.Left" Value="{Binding X2Text}"/>
+                            <Setter Property="Canvas.Top" Value="{Binding X1Text}"/>
+                        </Style>
+                    </ItemsControl.ItemContainerStyle>
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding TimeStringFormat}">
-                                <TextBlock.LayoutTransform>
-                                    <RotateTransform Angle="90" />
-                                </TextBlock.LayoutTransform>  
+                            <Border BorderThickness="{Binding Z}" BorderBrush="Black" CornerRadius="3" Padding="4" Background="{Binding Hex}">
+                                <TextBlock Text="{Binding TimeStringFormat}" Foreground="{Binding Hex1}">
+
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="270" />
+                                    </TextBlock.LayoutTransform>  
+                                    
                                 <behaviors:Interaction.Behaviors>
                                     <md:BindingToReadOnlyPropertyBehavior 
                                         Target="{Binding TextWidth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                                         Property="ActualWidth"/>
                                 </behaviors:Interaction.Behaviors>
-                            </TextBlock>
+                                </TextBlock>
+                            </Border>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
@@ -99,7 +103,7 @@
                                       Y1="{Binding Y1}" 
                                       X2="{Binding X2}" 
                                       Y2="{Binding Y2}" 
-                                      Stroke="#b1b3b1" StrokeThickness="1"/>
+                                      Stroke="Black" StrokeThickness="2"/>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
@@ -164,7 +168,14 @@
                           Y2="{Binding Filler.LineNow.LineNow.Y2}"
                           Stroke="Red" StrokeThickness="1"/>
                 </Canvas>
-
+                <Canvas Width="{Binding Filler.Width}">
+                    <Line  
+                          X1="{Binding Filler.Lines.X1}" 
+                          Y1="{Binding Filler.Lines.Y1}"
+                          X2="{Binding Filler.Lines.X2}" 
+                          Y2="{Binding Filler.Lines.Y2}"
+                          Stroke="Black" StrokeThickness="1"/>
+                </Canvas>
                 <ItemsControl ItemsSource="{Binding Filler.MeltingLines}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
