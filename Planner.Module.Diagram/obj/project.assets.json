@@ -182,24 +182,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mao35\\.nuget\\packages\\": {},
-    "G:\\NuGetPackages": {}
+    "C:\\Users\\ilyadlav\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+      "projectUniqueName": "C:\\Users\\ilyadlav\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
       "projectName": "Planner.Module.Diagram",
-      "projectPath": "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
-      "packagesPath": "C:\\Users\\mao35\\.nuget\\packages\\",
-      "outputPath": "H:\\Planner\\Planner\\Planner.Module.Diagram\\obj\\",
+      "projectPath": "C:\\Users\\ilyadlav\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+      "packagesPath": "C:\\Users\\ilyadlav\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ilyadlav\\Desktop\\Planner\\Planner.Module.Diagram\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "G:\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mao35\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ilyadlav\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -253,7 +248,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

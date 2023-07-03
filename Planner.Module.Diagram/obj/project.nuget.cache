@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "IvaA8eUPhSrjXC5AqJAkT27Jls6NTRT4EbJLQaM2m/9aySZZdHRLdMqYXuVNVOpm9RKnePW8QwZkal2WT3Yhgw==",
+  "dgSpecHash": "S9AMk+dohRsxgrP54RQ1NNs8pDJQLK6XA1hlB5/QckHkgzdPfXfBPQgJrxXnnq9lh0fVH0mhmRakEkgdhh0WWw==",
   "success": true,
-  "projectFilePath": "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+  "projectFilePath": "C:\\Users\\ilyadlav\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mao35\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
-    "C:\\Users\\mao35\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\mao35\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
-    "C:\\Users\\mao35\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
+    "C:\\Users\\ilyadlav\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\ilyadlav\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\ilyadlav\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\ilyadlav\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
   ],
   "logs": []
 }

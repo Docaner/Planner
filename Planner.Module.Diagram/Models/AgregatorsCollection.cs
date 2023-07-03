@@ -10,26 +10,31 @@ namespace Planner.Module.Diagram.Models
     public class AgregatorsCollection: ObservableCollection<Agregator>
     {
         public AgregatorsCollection(CanvasSettings settings) {
-            ObservableCollection<JsonAgregator> jsonAgregators = ReadJson();
+            IDialogService dialogService = new DefaultDialogService();
+            if (dialogService.OpenFileDialog())
+            {
+                ObservableCollection<JsonAgregator> jsonAgregators = ReadJson(dialogService.FilePath);
 
-            foreach (JsonAgregator jsonAgregator in jsonAgregators){
-                Agregator agregator = new Agregator(jsonAgregator.name, new ObservableCollection<Melting>());
-                foreach (JsonMelting jsonMelting in jsonAgregator.meltings)
+                foreach (JsonAgregator jsonAgregator in jsonAgregators)
                 {
-                    agregator.Meltings.Add(new Melting(
-                        jsonMelting.heatNum, 
-                        jsonMelting.start,
-                        jsonMelting.end,
-                        "#ADFF2F",
-                        settings));
+                    Agregator agregator = new Agregator(jsonAgregator.name, new ObservableCollection<Melting>());
+                    foreach (JsonMelting jsonMelting in jsonAgregator.meltings)
+                    {
+                        agregator.Meltings.Add(new Melting(
+                            jsonMelting.heatNum,
+                            jsonMelting.start,
+                            jsonMelting.end,
+                            "#ADFF2F",
+                            settings));
+                    }
+                    Add(agregator);
                 }
-                Add(agregator);
             }
         }
 
-        private ObservableCollection<JsonAgregator> ReadJson()
+        private ObservableCollection<JsonAgregator> ReadJson(string fileName)
         {
-            string json = File.ReadAllText("test.txt");
+            string json = File.ReadAllText(fileName);
             ObservableCollection<JsonAgregator> jsonAgregators = JsonConvert.DeserializeObject<ObservableCollection<JsonAgregator>>(json);
             return jsonAgregators;
         }
