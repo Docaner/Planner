@@ -32,7 +32,6 @@ namespace Planner.Module.Diagram.Models
                 _start = value;
                 UpdateStartStringFormat();
                 UpdateCanvasLeft();
-                UpdateCanvasTop();
             }
         }
         private DateTime _start;
@@ -69,11 +68,6 @@ namespace Planner.Module.Diagram.Models
         private double _canvasLeft;
 
         public void UpdateCanvasLeft() => CanvasLeft = _settings.ConvertTimeToCanvasLeft(Start);
-
-        public double CanvasTop { get => _canvasTop; set => SetProperty(ref _canvasTop, value); }
-        private double _canvasTop;
-
-        private void UpdateCanvasTop() { CanvasTop = 5; Trace.WriteLine(_height); }
 
         /// <summary>
         /// Ширина блока

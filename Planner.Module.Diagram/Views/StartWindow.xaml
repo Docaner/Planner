@@ -113,44 +113,48 @@
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
+                                <Grid>
+                                    <behaviors:Interaction.Behaviors>
+                                        <md:BindingToReadOnlyPropertyBehavior 
+                                              Target="{Binding ActualHeight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                               Property="ActualHeight"/>
+                                    </behaviors:Interaction.Behaviors>
+                                    <Border BorderThickness="0, 1, 0, 1" CornerRadius="1" Height="{Binding Height}" 
+                                        BorderBrush="#515151" Background="#E2E0E3"
+                                        >
+                                        <ItemsControl ItemsSource="{Binding Meltings}">
 
-                                <ItemsControl ItemsSource="{Binding Meltings}">
+                                            <ItemsControl.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <Canvas Width="{Binding Path=Width}"
+                                                            Grid.Row="{
+                                                                Binding Path=(ItemsControl.AlternationIndex),
+                                                                RelativeSource={RelativeSource TemplatedParent}
+                                                            }">
 
-                                    <ItemsControl.ItemsPanel>
-                                        <ItemsPanelTemplate>
-                                            <Canvas Grid.Row=
-                                                    "{
-                                                        Binding Path=(ItemsControl.AlternationIndex),
-                                                        RelativeSource={RelativeSource TemplatedParent}
-                                                    }">
-                                                <behaviors:Interaction.Behaviors>
-                                                    <md:BindingToReadOnlyPropertyBehavior 
-                                                        Target="{Binding Height, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                                                        Property="ActualHeight"/>
-                                                </behaviors:Interaction.Behaviors>
-                                            </Canvas>
-                                        </ItemsPanelTemplate>
-                                    </ItemsControl.ItemsPanel>
+                                                    </Canvas>
+                                                </ItemsPanelTemplate>
+                                            </ItemsControl.ItemsPanel>
 
-                                    <ItemsControl.ItemContainerStyle>
-                                        <Style TargetType="ContentPresenter">
-                                            <Setter Property="Canvas.Left" Value="{Binding CanvasLeft}"/>
-                                            <Setter Property="Canvas.Top" Value="{Binding CanvasTop}"/>
-                                        </Style>
-                                    </ItemsControl.ItemContainerStyle>
+                                            <ItemsControl.ItemContainerStyle>
+                                                <Style TargetType="ContentPresenter">
+                                                    <Setter Property="Canvas.Left" Value="{Binding CanvasLeft}"/>
+                                                </Style>
+                                            </ItemsControl.ItemContainerStyle>
 
-                                    <ItemsControl.ItemTemplate>
-                                        <DataTemplate>
-                                            <components:Melting/>
-                                        </DataTemplate>
-                                    </ItemsControl.ItemTemplate>
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <components:Melting/>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
 
-                                </ItemsControl>
-
+                                        </ItemsControl>
+                                    </Border>
+                                </Grid>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
-                    
+
                 </Canvas>
                 <Canvas Width="{Binding Filler.Width}">
                     <Line  

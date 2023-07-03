@@ -22,11 +22,34 @@ namespace Planner.Module.Diagram.Models
             get => _height;
             set
             {
+                if (value <= 0) return;
                 SetProperty(ref _height, value);
                 UpdateHeightMeltings();
             }
         }
         private double _height;
+
+        public double ActualHeight
+        {
+            get => _actualHeight;
+            set
+            {
+                SetProperty(ref _actualHeight, value);
+                Height = 0.9 * value;
+            }
+        }
+        private double _actualHeight;
+
+        public double Width
+        {
+            get => _width;
+            set
+            {
+                SetProperty(ref _width, value);
+                UpdateHeightMeltings();
+            }
+        }
+        private double _width;
 
         /// <summary>
         /// Коллекция плавок
@@ -40,7 +63,7 @@ namespace Planner.Module.Diagram.Models
         /// <param name="height"></param>
         public void UpdateHeightMeltings()
         {
-            double melHeight = Height * 0.9;
+            double melHeight = Height - 4;
             foreach (var melting in Meltings)
                 melting.Height = melHeight;
         }

@@ -21,6 +21,7 @@ namespace Planner.Module.Diagram.Models
             set
             {
                 SetProperty(ref _width, value);
+                UpdateAgragatorsWidth();
             }
         }
         private double _width;
@@ -175,7 +176,17 @@ namespace Planner.Module.Diagram.Models
                 InitMeltingLines();
                 SubscribrMeltings();
                 ReDrawLines();
-                UpdateMeltings();
+                UpdateMeltings(); 
+                UpdateAgragatorsWidth();
+            }
+        }
+
+        private void UpdateAgragatorsWidth()
+        {
+            if (Agregators == null) return;
+            foreach (Agregator agr in Agregators)
+            {
+                agr.Width = Width;
             }
         }
 

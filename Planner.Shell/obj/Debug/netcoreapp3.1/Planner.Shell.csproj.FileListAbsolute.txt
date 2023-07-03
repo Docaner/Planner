@@ -368,3 +368,4 @@ E:\Учеба\Практика_Северсталь\Planner\Planner_6\Planner\Pl
 E:\Учеба\Практика_Северсталь\Planner\Planner_6\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.dll
 E:\Учеба\Практика_Северсталь\Planner\Planner_6\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.pdb
 E:\Учеба\Практика_Северсталь\Planner\Planner_6\Planner\Planner.Shell\obj\Debug\netcoreapp3.1\Planner.Shell.genruntimeconfig.cache
+C:\Users\Данил\Desktop\Planner\Planner.Shell\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
