@@ -80,7 +80,15 @@ namespace Planner.Module.Diagram.Models
         /// <summary>
         /// Высота плавки 
         /// </summary>
-        public double Height { get => _height; set => SetProperty(ref _height, value); }
+        public double Height
+        {
+            get => _height;
+            set
+            {
+                if (value < 0) return;
+                SetProperty(ref _height, value);
+            }
+        }
         private double _height;
 
         /// <summary>
