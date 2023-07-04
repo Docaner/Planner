@@ -161,6 +161,20 @@
 
                 </Canvas>
                 <Canvas Width="{Binding Filler.Width}">
+                    <TextBlock Text="{Binding Filler.StartEndLines[0].TimeStringFormat}" Canvas.Left="{Binding  Filler.StartEndLines[0].X2Text}" Canvas.Top="{Binding  Filler.StartEndLines[0].X1Text}">
+                        <TextBlock.LayoutTransform>
+                            <RotateTransform Angle="270" />
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </Canvas>
+                <Canvas Width="{Binding Filler.Width}">
+                    <TextBlock Text="{Binding Filler.StartEndLines[1].TimeStringFormat}" Canvas.Left="{Binding  Filler.StartEndLines[1].X2Text}" Canvas.Top="{Binding  Filler.StartEndLines[1].X1Text}">
+                        <TextBlock.LayoutTransform>
+                            <RotateTransform Angle="270" />
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </Canvas>
+                <Canvas Width="{Binding Filler.Width}">
                     <Line  
                           X1="{Binding Filler.LineNow.LineNow.X1}" 
                           Y1="{Binding Filler.LineNow.LineNow.Y1}"

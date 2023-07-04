@@ -366,19 +366,19 @@ namespace Planner.Module.Diagram.Models
         /// <summary>
         /// Линии начала и конца плавки
         /// </summary>
-        public ObservableCollection<LineItem> StartEndLines
+        public ObservableCollection<CanvasTime> StartEndLines
         {
             get => _startEndLines;
             set => SetProperty(ref _startEndLines, value);
         }
 
-        private ObservableCollection<LineItem> _startEndLines;
+        private ObservableCollection<CanvasTime> _startEndLines;
 
         private void InitStartEndLines()
         {
-            StartEndLines = new ObservableCollection<LineItem>();
+            StartEndLines = new ObservableCollection<CanvasTime>();
             for(int i = 0; i < 2; i++)
-                StartEndLines.Add(new LineItem(0, 0, 0, 0, DateTime.Now));
+                StartEndLines.Add(new CanvasTime(0, 0, 0, 0, DateTime.Now));
         }
 
         /// <summary>
@@ -390,7 +390,7 @@ namespace Planner.Module.Diagram.Models
             int indexAgr = 0;
             Agregator agr = null;
 
-            for(int i = 0; i < Agregators.Count; i++)
+            for (int i = 0; i < Agregators.Count; i++)
             {
                 if (Agregators[i].Meltings.FirstOrDefault(x => x == target) != null)
                 {
@@ -410,23 +410,30 @@ namespace Planner.Module.Diagram.Models
             StartEndLines[0].X1 = canvasLeft;
             StartEndLines[0].Y1 = y1;
             StartEndLines[0].X2 = canvasLeft;
-            StartEndLines[0].Y2 = Height;
+            StartEndLines[0].Y2 = Height - 64;
+            StartEndLines[0].Time = target.Start;
 
+            StartEndLines[0].X2Text = StartEndLines[0].X2 - 8;
+            StartEndLines[0].X1Text = Height - 50;
             canvasLeft = _settings.ConvertTimeToCanvasLeft(end) + 1;
             StartEndLines[1].X1 = canvasLeft;
             StartEndLines[1].Y1 = y1;
             StartEndLines[1].X2 = canvasLeft;
-            StartEndLines[1].Y2 = Height;
+            StartEndLines[1].Y2 = Height - 64;
+            StartEndLines[1].Time = target.End;
+            StartEndLines[1].X2Text = StartEndLines[1].X2 - 8;
+            StartEndLines[1].X1Text = Height - 50;
         }
-        
-        private void HideStartEndLines()
+
+            private void HideStartEndLines()
         {
-            foreach(LineItem line in StartEndLines)
+            foreach(CanvasTime line in StartEndLines)
             {
                 line.X1 = 0;
                 line.Y1 = 0;
                 line.X2 = 0;
                 line.Y2 = 0;
+                line.TimeStringFormat = "";
             }
         }
 
