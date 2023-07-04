@@ -212,7 +212,7 @@
                                       Y1="{Binding Y1}" 
                                       X2="{Binding X2}" 
                                       Y2="{Binding Y2}" 
-                                      Stroke="#42AAFF" StrokeThickness="1"/>
+                                      Stroke="Red" StrokeThickness="2"/>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>

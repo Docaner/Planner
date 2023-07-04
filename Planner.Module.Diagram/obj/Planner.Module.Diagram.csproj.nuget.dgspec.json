@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {}
+    "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {}
   },
   "projects": {
-    "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
+    "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+        "projectUniqueName": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
         "projectName": "Planner.Module.Diagram",
-        "projectPath": "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
-        "packagesPath": "C:\\Users\\mao35\\.nuget\\packages\\",
-        "outputPath": "H:\\Planner\\Planner\\Planner.Module.Diagram\\obj\\",
+        "projectPath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+        "packagesPath": "C:\\Users\\Данил\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "G:\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mao35\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Данил\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
