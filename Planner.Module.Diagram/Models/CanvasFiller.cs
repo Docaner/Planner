@@ -211,6 +211,7 @@ namespace Planner.Module.Diagram.Models
 
         private void ReDrawLines()
         {
+            if (Agregators == null || Agregators.Count <= 0) return;
             DateTime min, max;
             FindMinMaxTimeMeltings(out min, out max);
             LinesDraw(min.AddHours(-1), max.AddHours(1));
@@ -281,15 +282,12 @@ namespace Planner.Module.Diagram.Models
             for (int i = 0; i < Agregators.Count - 1; i++) lines.Add(new LineItem(0, 0, 0, 0, DateTime.Now));
             MeltingLines = lines;
         }
-
         /// <summary>
-        /// Рисует линии к указанной плавке в разных агрегаторах
+        /// Рисовка линий к плавкам
         /// </summary>
-        /// <param name="target">Melting, на который наведен курсор</param>
-        private void DrawLinesToMeltings(Melting target)
+        /// <param name="target">Плавка, к которой нужно рисовать</param>
+        private void ShowMeltingLines(Melting target)
         {
-            LeaveMeltingsLines(null);
-
             Melting startDraw = Agregators[0].Meltings.FirstOrDefault(x => x.Id == target.Id);
             Melting endDraw;
 
@@ -320,10 +318,9 @@ namespace Planner.Module.Diagram.Models
         }
 
         /// <summary>
-        /// Убирает линии проведённые к плавкам
+        /// Скрывает линии, проведенные к плавкам
         /// </summary>
-        /// <param name="target">Плавка</param>
-        private void LeaveMeltingsLines(Melting target)
+        private void HideMeltingLines()
         {
             foreach (LineItem line in MeltingLines)
             {
@@ -332,6 +329,27 @@ namespace Planner.Module.Diagram.Models
                 line.X2 = 0;
                 line.Y2 = 0;
             }
+        }
+
+        /// <summary>
+        /// Рисует линии к указанной плавке в разных агрегаторах
+        /// </summary>
+        /// <param name="target">Melting, на который наведен курсор</param>
+        private void DrawLinesToMeltings(Melting target)
+        {
+            ShowMeltingLines(target);
+            ShowStartEndLines(target);
+
+        }
+
+        /// <summary>
+        /// Убирает линии проведённые к плавкам
+        /// </summary>
+        /// <param name="target">Плавка</param>
+        private void LeaveMeltingsLines(Melting target)
+        {
+            HideMeltingLines();
+            HideStartEndLines();
         }
         /// <summary>
         /// Линия реального времени
@@ -345,6 +363,73 @@ namespace Planner.Module.Diagram.Models
         /// </summary>
         private CanvasSettings _settings;
 
+        /// <summary>
+        /// Линии начала и конца плавки
+        /// </summary>
+        public ObservableCollection<LineItem> StartEndLines
+        {
+            get => _startEndLines;
+            set => SetProperty(ref _startEndLines, value);
+        }
+
+        private ObservableCollection<LineItem> _startEndLines;
+
+        private void InitStartEndLines()
+        {
+            StartEndLines = new ObservableCollection<LineItem>();
+            for(int i = 0; i < 2; i++)
+                StartEndLines.Add(new LineItem(0, 0, 0, 0, DateTime.Now));
+        }
+
+        /// <summary>
+        /// Показывает линии начала и конца
+        /// </summary>
+        /// <param name="target">Плавка, к которой рисуются линии</param>
+        private void ShowStartEndLines(Melting target)
+        {
+            int indexAgr = 0;
+            Agregator agr = null;
+
+            for(int i = 0; i < Agregators.Count; i++)
+            {
+                if (Agregators[i].Meltings.FirstOrDefault(x => x == target) != null)
+                {
+                    agr = Agregators[i];
+                    indexAgr = i;
+                    break;
+                }
+            }
+
+            double y1 = agr.ActualHeight * (indexAgr + 1) - (agr.ActualHeight - agr.Height) / 2;
+
+
+            DateTime start = target.Start;
+            DateTime end = target.End;
+
+            double canvasLeft = _settings.ConvertTimeToCanvasLeft(start) + 1;
+            StartEndLines[0].X1 = canvasLeft;
+            StartEndLines[0].Y1 = y1;
+            StartEndLines[0].X2 = canvasLeft;
+            StartEndLines[0].Y2 = Height;
+
+            canvasLeft = _settings.ConvertTimeToCanvasLeft(end) + 1;
+            StartEndLines[1].X1 = canvasLeft;
+            StartEndLines[1].Y1 = y1;
+            StartEndLines[1].X2 = canvasLeft;
+            StartEndLines[1].Y2 = Height;
+        }
+        
+        private void HideStartEndLines()
+        {
+            foreach(LineItem line in StartEndLines)
+            {
+                line.X1 = 0;
+                line.Y1 = 0;
+                line.X2 = 0;
+                line.Y2 = 0;
+            }
+        }
+
         public CanvasFiller(CanvasSettings settings)
         {
             _settings = settings;
@@ -353,6 +438,7 @@ namespace Planner.Module.Diagram.Models
 
             LinesDraw(_settings.TimeStart, _settings.TimeEnd);
             LineNowInit();
+            InitStartEndLines();
         }
     }
 }

@@ -167,13 +167,23 @@
                           X2="{Binding Filler.LineNow.LineNow.X2}" 
                           Y2="{Binding Filler.LineNow.LineNow.Y2}"
                           Stroke="Red" StrokeThickness="1"/>
-                </Canvas>
-                <Canvas Width="{Binding Filler.Width}">
                     <Line  
                           X1="{Binding Filler.Lines.X1}" 
                           Y1="{Binding Filler.Lines.Y1}"
                           X2="{Binding Filler.Lines.X2}" 
                           Y2="{Binding Filler.Lines.Y2}"
+                          Stroke="Black" StrokeThickness="1"/>
+                    <Line  
+                          X1="{Binding Filler.StartEndLines[0].X1}" 
+                          Y1="{Binding Filler.StartEndLines[0].Y1}"
+                          X2="{Binding Filler.StartEndLines[0].X2}" 
+                          Y2="{Binding Filler.StartEndLines[0].Y2}"
+                          Stroke="Black" StrokeThickness="1"/>
+                    <Line  
+                          X1="{Binding Filler.StartEndLines[1].X1}" 
+                          Y1="{Binding Filler.StartEndLines[1].Y1}"
+                          X2="{Binding Filler.StartEndLines[1].X2}" 
+                          Y2="{Binding Filler.StartEndLines[1].Y2}"
                           Stroke="Black" StrokeThickness="1"/>
                 </Canvas>
                 <ItemsControl ItemsSource="{Binding Filler.MeltingLines}">
