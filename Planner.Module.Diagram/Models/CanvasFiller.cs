@@ -292,28 +292,28 @@ namespace Planner.Module.Diagram.Models
             Melting endDraw;
 
             int indexLine = 0;
-            double y = Agregators[0].Height / 2;
+            double y1 = Agregators[0].ActualHeight / 2;
+            double y2 = y1 + Agregators[0].ActualHeight;
 
             for (int i = 1; i < Agregators.Count; i++)
             {
                 endDraw = Agregators[i].Meltings.FirstOrDefault(x => x.Id == target.Id);
 
-                if (endDraw == null) continue;
-
-                if (startDraw != null)
+                if (startDraw != null && endDraw != null)
                 {
                     MeltingLines[indexLine].X1 = startDraw.CanvasLeft;
-                    MeltingLines[indexLine].Y1 = y;
-
-                    y += Agregators[i].Height;
+                    MeltingLines[indexLine].Y1 = indexLine <= 0 ? y1 : MeltingLines[indexLine - 1].Y2;
 
                     MeltingLines[indexLine].X2 = endDraw.CanvasLeft;
-                    MeltingLines[indexLine].Y2 = y;
+                    MeltingLines[indexLine].Y2 = y2;
+                    
+                    startDraw = endDraw;
 
                     indexLine++;
                 }
 
-                startDraw = endDraw;
+                y2 += Agregators[i].ActualHeight;
+
             }
         }
 

@@ -119,6 +119,12 @@ namespace Planner.Module.Diagram.Models
         /// </summary>
         private CanvasSettings _settings;
 
+        private string ColorHash(int id)
+        {
+            int iResult = (987 * id + 999) % 0xFFF;
+            return $"#{iResult:X3}";
+        }
+
         public Melting(int id, DateTime start, DateTime end, string hex, CanvasSettings settings)
         {
             _settings = settings;
@@ -126,6 +132,19 @@ namespace Planner.Module.Diagram.Models
             Start = start;
             End = end;
             Hex = hex;
+
+            MouseEnter = new DelegateCommand(MouseEnterAct);
+            MouseLeave = new DelegateCommand(MouseLeaveAct);
+        }
+
+        public Melting(int id, DateTime start, DateTime end, CanvasSettings settings)
+        {
+            _settings = settings;
+            Id = id;
+            Start = start;
+            End = end;
+            
+            Hex = ColorHash(id);
 
             MouseEnter = new DelegateCommand(MouseEnterAct);
             MouseLeave = new DelegateCommand(MouseLeaveAct);

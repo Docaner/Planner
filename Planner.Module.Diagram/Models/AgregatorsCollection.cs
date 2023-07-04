@@ -24,11 +24,13 @@ namespace Planner.Module.Diagram.Models
                             jsonMelting.heatNum,
                             jsonMelting.start,
                             jsonMelting.end,
-                            "#ADFF2F",
                             settings));
                     }
                     Add(agregator);
                 }
+
+                //var normAgregators = NormalizeAgregators(jsonAgregators);
+                //SerializeJson("norm.json", normAgregators);
             }
         }
 
@@ -37,6 +39,26 @@ namespace Planner.Module.Diagram.Models
             string json = File.ReadAllText(fileName);
             ObservableCollection<JsonAgregator> jsonAgregators = JsonConvert.DeserializeObject<ObservableCollection<JsonAgregator>>(json);
             return jsonAgregators;
+        }
+
+
+        private ObservableCollection<JsonAgregator> NormalizeAgregators(ObservableCollection<JsonAgregator> from)
+        {
+            ObservableCollection<JsonAgregator> to = new ObservableCollection<JsonAgregator>(from);
+            foreach(JsonAgregator jsonAgregator in to)
+            {
+                for(int i = 0; i < jsonAgregator.meltings.Count; i++)
+                {
+                    jsonAgregator.meltings[i].heatNum = i;
+                }
+            }
+            return to;
+        }
+
+        private void SerializeJson(string fileName, ObservableCollection<JsonAgregator> agrs)
+        {
+            var serialize = JsonConvert.SerializeObject(agrs);
+            File.WriteAllText(fileName, serialize);
         }
 
         private class JsonAgregator
