@@ -301,10 +301,10 @@ namespace Planner.Module.Diagram.Models
 
                 if (startDraw != null && endDraw != null)
                 {
-                    MeltingLines[indexLine].X1 = startDraw.CanvasLeft;
+                    MeltingLines[indexLine].X1 = startDraw.CanvasLeft + startDraw.Width / 2;
                     MeltingLines[indexLine].Y1 = indexLine <= 0 ? y1 : MeltingLines[indexLine - 1].Y2;
 
-                    MeltingLines[indexLine].X2 = endDraw.CanvasLeft;
+                    MeltingLines[indexLine].X2 = endDraw.CanvasLeft + endDraw.Width / 2;
                     MeltingLines[indexLine].Y2 = y2;
                     
                     startDraw = endDraw;

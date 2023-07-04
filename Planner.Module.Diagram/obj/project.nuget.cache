@@ -1,20 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "bBaWwfdUIKULg/FfvIG7dWetKNJd5JAiOnFmf/RU6oe5arLQ6MMO3Q6bwshfhzuCXwCLnPY4t4jPRUM4XYNXoQ==",
+  "dgSpecHash": "4jRi7vgtofy4tRHgRFML12r+y5Gge3GsfwqwfryQTv+p8ADE3/9q8nOjEYhWomAMl0ydS2yq/FV18lS06iTg4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+  "projectFilePath": "E:\\Учеба\\Практика_Северсталь\\Planner\\PLanner_8\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Данил\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
-    "C:\\Users\\Данил\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\Данил\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
-    "C:\\Users\\Данил\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
+    "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Ошибка чтения файла кэша C:\\Users\\Данил\\Desktop\\Planner\\Planner.Module.Diagram\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
