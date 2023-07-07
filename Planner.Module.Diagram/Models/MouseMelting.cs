@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace Planner.Module.Diagram.Models
 {
     public class MouseMelting : IMouseCaptureProxy
     {
         public event EventHandler Capture;
         public event EventHandler Release;
-
+        public CanvasSettings settings;
         /// <summary>
         /// Мышь нажата
         /// </summary>
@@ -32,8 +33,9 @@ namespace Planner.Module.Diagram.Models
             double diffrence = newX - _oldX;
             
             Focus.CanvasLeft += diffrence;
-
+           
             _oldX = newX;
+          
         }
 
         /// <summary>
@@ -41,7 +43,9 @@ namespace Planner.Module.Diagram.Models
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void OnMouseUp(object sender, MouseCaptureArgs e) { }
+        public void OnMouseUp(object sender, MouseCaptureArgs e) {
+            
+        }
 
         /// <summary>
         /// Плавка, которая передвигается

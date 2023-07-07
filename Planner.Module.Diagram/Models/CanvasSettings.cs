@@ -31,7 +31,14 @@ namespace Planner.Module.Diagram.Models
             TimeSpan span = time - TimeStart;
             return PixelsInHour * span.TotalSeconds / 3600;
         }
-
+        public DateTime ConvertCanvasToTime(double canvasleft)
+        {
+            canvasleft = canvasleft * 3600 / PixelsInHour;
+          
+            TimeSpan span = TimeSpan.FromSeconds(canvasleft);
+            DateTime time = TimeStart+span;
+            return time;
+        }
         public CanvasSettings(DateTime timeStart, DateTime timeEnd, double pixelsInHour)
         {
             TimeStart = timeStart;

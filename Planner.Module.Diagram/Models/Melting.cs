@@ -30,8 +30,10 @@ namespace Planner.Module.Diagram.Models
             set
             {
                 _start = value;
+               
+                
                 UpdateStartStringFormat();
-                UpdateCanvasLeft();
+
             }
         }
         private DateTime _start;
@@ -51,7 +53,7 @@ namespace Planner.Module.Diagram.Models
             {
                 _end = value;
                 UpdateEndStringFormat();
-                UpdateWidth();
+                
             }
         }
         private DateTime _end;
@@ -64,7 +66,14 @@ namespace Planner.Module.Diagram.Models
         /// <summary>
         /// Отступ от левого конца канваса
         /// </summary>
-        public double CanvasLeft { get => _canvasLeft; set => SetProperty(ref _canvasLeft, value); }
+        public double CanvasLeft { get => _canvasLeft; set {
+                SetProperty(ref _canvasLeft, value);
+                  Start=_settings.ConvertCanvasToTime(value);
+                  End=_settings.ConvertCanvasToTime(Width);
+                    } 
+        
+        
+        }
         private double _canvasLeft;
 
         public void UpdateCanvasLeft() => CanvasLeft = _settings.ConvertTimeToCanvasLeft(Start);
@@ -163,7 +172,8 @@ namespace Planner.Module.Diagram.Models
             Id = id;
             Start = start;
             End = end;
-            
+            UpdateCanvasLeft();
+            UpdateWidth();
             Hex = ColorHash(id);
 
             MouseEnter = new DelegateCommand(MouseEnterAct);
