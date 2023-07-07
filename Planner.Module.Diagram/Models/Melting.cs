@@ -122,6 +122,17 @@ namespace Planner.Module.Diagram.Models
         {
             EventMouseLeave?.Invoke(this);
         }
+        /// <summary>
+        /// Событие MouseRightButtonDowm (нажатие пкм)
+        /// </summary>
+        public ICommand MouseRightButtonDowm { get; }
+
+        public event Action<Melting> EventMouseRightButtonDowm;
+
+        private void MouseRightButtonDowmAct()
+        {
+            EventMouseRightButtonDowm?.Invoke(this);
+        }
 
         /// <summary>
         /// Действие нажатия на левую кнопку
@@ -162,6 +173,7 @@ namespace Planner.Module.Diagram.Models
 
             MouseEnter = new DelegateCommand(MouseEnterAct);
             MouseLeave = new DelegateCommand(MouseLeaveAct);
+            MouseRightButtonDowm = new DelegateCommand(MouseRightButtonDowmAct);
             MouseLeftButtonDown = new DelegateCommand(() => EventMouseLeftButtonDown?.Invoke(this) );
             MouseLeftButtonUp = new DelegateCommand(() => EventMouseLeftButtonUp?.Invoke(this));
         }
@@ -178,6 +190,7 @@ namespace Planner.Module.Diagram.Models
 
             MouseEnter = new DelegateCommand(MouseEnterAct);
             MouseLeave = new DelegateCommand(MouseLeaveAct);
+            MouseRightButtonDowm = new DelegateCommand(MouseRightButtonDowmAct);
             MouseLeftButtonDown = new DelegateCommand(() => EventMouseLeftButtonDown?.Invoke(this));
             MouseLeftButtonUp = new DelegateCommand(() => EventMouseLeftButtonUp?.Invoke(this));
         }

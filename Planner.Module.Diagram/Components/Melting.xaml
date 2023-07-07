@@ -24,7 +24,10 @@
             <i:EventTrigger EventName="MouseLeftButtonUp">
                  <i:InvokeCommandAction Command="{Binding MouseLeftButtonUp}"/>
             </i:EventTrigger>
-        </i:Interaction.Triggers>
+            <i:EventTrigger EventName="MouseRightButtonDown">
+                <i:InvokeCommandAction Command="{Binding MouseRightButtonDowm}"/>
+            </i:EventTrigger>
+            </i:Interaction.Triggers>
 
         <Grid.Background>
             <SolidColorBrush Color="{Binding  Hex}"/>

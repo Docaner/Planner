@@ -238,6 +238,7 @@ namespace Planner.Module.Diagram.Models
                 {
                     mel.EventMouseEnter += DrawLinesToMeltings;
                     mel.EventMouseLeave += LeaveMeltingsLines;
+                    mel.EventMouseRightButtonDowm += CreateWindowAddInf;
                 }
             }
         }
@@ -351,6 +352,19 @@ namespace Planner.Module.Diagram.Models
             HideMeltingLines();
             HideStartEndLines();
         }
+
+        /// <summary>
+        /// Свойство для связи данных плавки и окна доп.информации 
+        /// </summary>
+        public Melting FocusMelting { get => _focusMelting; set => SetProperty(ref _focusMelting, value); }
+        private Melting _focusMelting;
+
+        /// <summary>
+        /// Окно дополнительной информации плавки
+        /// </summary>
+        public AddInformations Wai { get => _wai; set => SetProperty(ref _wai, value); }
+        private AddInformations _wai;
+
         /// <summary>
         /// Линия реального времени
         /// </summary>
@@ -374,6 +388,26 @@ namespace Planner.Module.Diagram.Models
 
         private ObservableCollection<CanvasTime> _startEndLines;
 
+        /// <summary>
+        /// Создание окна с доп.информацией о выбранной плавке
+        /// </summary>
+        /// <param name="target"></param>
+        public void CreateWindowAddInf(Melting target)
+        {
+            FocusMelting = target;
+            int i = NumberMelting(target);
+
+            Wai.WidthWinAdd = target.CanvasLeft + 2 * (target.Width / 3);
+
+            switch (Wai.NumberAddInform(i, Agregators.Count))
+            {
+                case 0: { Wai.HeighthWinAdd = kalkulHeight(target) - Agregators[0].ActualHeight / 10; break; }
+                case 1: { Wai.HeighthWinAdd = Agregators[i].ActualHeight * (i) - Agregators[0].ActualHeight / 2; break; }
+            }
+
+            Wai.VisibilityWinAddInf(target);
+        }
+
         private void InitStartEndLines()
         {
             StartEndLines = new ObservableCollection<CanvasTime>();
@@ -385,14 +419,15 @@ namespace Planner.Module.Diagram.Models
         }
 
         /// <summary>
-        /// Показывает линии начала и конца
+        /// Метод возвращающий индекс агрегатора выбраной плавки.
         /// </summary>
-        /// <param name="target">Плавка, к которой рисуются линии</param>
-        private void ShowStartEndLines(Melting target)
+        /// <param name="target"></param>
+        /// <returns></returns>
+        public int NumberMelting(Melting target)
         {
             int indexAgr = 0;
             Agregator agr = null;
-
+            if (Agregators == null) return 0;
             for (int i = 0; i < Agregators.Count; i++)
             {
                 if (Agregators[i].Meltings.FirstOrDefault(x => x == target) != null)
@@ -402,8 +437,29 @@ namespace Planner.Module.Diagram.Models
                     break;
                 }
             }
+            return indexAgr;
+        }
 
-            double y1 = agr.ActualHeight * (indexAgr + 1) - (agr.ActualHeight - agr.Height) / 2;
+        /// <summary>
+        /// Метод, высчитывающий высоту плавки.
+        /// </summary>
+        /// <param name="target"></param>
+        /// <returns></returns>
+        public double kalkulHeight(Melting target)
+        {
+            int i = NumberMelting(target);
+            return (Agregators[i].ActualHeight * (i + 1));
+        }
+
+        /// <summary>
+        /// Показывает линии начала и конца
+        /// </summary>
+        /// <param name="target">Плавка, к которой рисуются линии</param>
+        private void ShowStartEndLines(Melting target)
+        {
+
+            int i = NumberMelting(target);
+            double y1 = Agregators[i].ActualHeight * (i + 1) - (Agregators[i].ActualHeight - Agregators[i].Height) / 2;
 
 
             DateTime start = target.Start;
@@ -449,6 +505,8 @@ namespace Planner.Module.Diagram.Models
             LinesDraw(_settings.TimeStart, _settings.TimeEnd);
             LineNowInit();
             InitStartEndLines();
+
+            Wai = new AddInformations();
         }
     }
 }

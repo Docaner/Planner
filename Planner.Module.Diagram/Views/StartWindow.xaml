@@ -202,6 +202,11 @@
                           X2="{Binding Filler.StartEndLines[1].X2}" 
                           Y2="{Binding Filler.StartEndLines[1].Y2}"
                           Stroke="Black" StrokeThickness="1" StrokeDashArray="3 3"/>
+                    
+                    <components:WindowAdditionalInfarmation Visibility="{Binding Filler.Wai.Visibility}"
+                        Canvas.Left="{Binding Filler.Wai.WidthWinAdd}"  
+                        Canvas.Top="{Binding Filler.Wai.HeighthWinAdd}"/>
+
                 </Canvas>
                 <ItemsControl ItemsSource="{Binding Filler.MeltingLines}">
                     <ItemsControl.ItemsPanel>
