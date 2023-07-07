@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Planner.Module.Diagram.Views"
              xmlns:md="clr-namespace:Planner.Module.Diagram.Models"
-             xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:components="clr-namespace:Planner.Module.Diagram.Components" 
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
@@ -57,11 +57,11 @@
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <Canvas Width="{Binding Filler.Width}" HorizontalAlignment="Center">
-                                <behaviors:Interaction.Behaviors>
+                                <i:Interaction.Behaviors>
                                     <md:BindingToReadOnlyPropertyBehavior 
                                         Target="{Binding Filler.Height, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                                         Property="ActualHeight"/>
-                                </behaviors:Interaction.Behaviors>
+                                </i:Interaction.Behaviors>
                             </Canvas>
                         </ItemsPanelTemplate>    
                     </ItemsControl.ItemsPanel>
@@ -80,11 +80,11 @@
                                         <RotateTransform Angle="270" />
                                     </TextBlock.LayoutTransform>  
                                     
-                                <behaviors:Interaction.Behaviors>
+                                <i:Interaction.Behaviors>
                                     <md:BindingToReadOnlyPropertyBehavior 
                                         Target="{Binding TextWidth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                                         Property="ActualWidth"/>
-                                </behaviors:Interaction.Behaviors>
+                                </i:Interaction.Behaviors>
                                 </TextBlock>
                             </Border>
                         </DataTemplate>
@@ -118,15 +118,18 @@
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
-                                    <behaviors:Interaction.Behaviors>
+                                    <i:Interaction.Behaviors>
                                         <md:BindingToReadOnlyPropertyBehavior 
                                               Target="{Binding ActualHeight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                                                Property="ActualHeight"/>
-                                    </behaviors:Interaction.Behaviors>
+                                    </i:Interaction.Behaviors>
                                     <Border BorderThickness="0, 1, 0, 1" CornerRadius="1" Height="{Binding Height}" 
                                         BorderBrush="#515151" Background="#E2E0E3"
                                         >
-                                        <ItemsControl ItemsSource="{Binding Meltings}">
+                                        <i:Interaction.Behaviors>
+                                                <md:MouseCaptureBehavior Proxy="{Binding Mouse}"/>
+                                        </i:Interaction.Behaviors>
+                                            <ItemsControl ItemsSource="{Binding Meltings}">
 
                                             <ItemsControl.ItemsPanel>
                                                 <ItemsPanelTemplate>

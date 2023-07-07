@@ -74,6 +74,14 @@ namespace Planner.Module.Diagram.Models
             Y2 = y2;
             Time = time;
         }
+
+        public CanvasTime()
+        {
+            X1 = 0;
+            Y1 = 0;
+            X2 = 0;
+            Y2 = 0;
+        }
     }
 }
 

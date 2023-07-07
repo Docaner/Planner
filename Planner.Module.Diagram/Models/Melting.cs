@@ -13,7 +13,7 @@ namespace Planner.Module.Diagram.Models
         private string _hex;
         public string Hex
         {
-            get => _hex;set => SetProperty(ref _hex, value);
+            get => _hex; set => SetProperty(ref _hex, value);
         }
         /// <summary>
         /// Номер плавки
@@ -74,7 +74,7 @@ namespace Planner.Module.Diagram.Models
         /// </summary>
         public double Width { get => _width; set => SetProperty(ref _width, value); }
         private double _width;
-        
+
         private void UpdateWidth() => Width = _settings.ConvertTimeToCanvasLeft(End) - CanvasLeft;
 
         /// <summary>
@@ -115,6 +115,24 @@ namespace Planner.Module.Diagram.Models
         }
 
         /// <summary>
+        /// Действие нажатия на левую кнопку
+        /// </summary>
+        public ICommand MouseLeftButtonDown { get;}
+        /// <summary>
+        /// Событие нажатия на ЛКМ
+        /// </summary>
+        public event Action<Melting> EventMouseLeftButtonDown;
+        
+        /// <summary>
+        /// Действие отжатия левой кнопки
+        /// </summary>
+        public ICommand MouseLeftButtonUp { get; }
+        /// <summary>
+        /// Событие нажатия на ЛКМ
+        /// </summary>
+        public event Action<Melting> EventMouseLeftButtonUp;
+
+        /// <summary>
         /// Данные о канвас
         /// </summary>
         private CanvasSettings _settings;
@@ -135,6 +153,8 @@ namespace Planner.Module.Diagram.Models
 
             MouseEnter = new DelegateCommand(MouseEnterAct);
             MouseLeave = new DelegateCommand(MouseLeaveAct);
+            MouseLeftButtonDown = new DelegateCommand(() => EventMouseLeftButtonDown?.Invoke(this) );
+            MouseLeftButtonUp = new DelegateCommand(() => EventMouseLeftButtonUp?.Invoke(this));
         }
 
         public Melting(int id, DateTime start, DateTime end, CanvasSettings settings)
@@ -148,6 +168,8 @@ namespace Planner.Module.Diagram.Models
 
             MouseEnter = new DelegateCommand(MouseEnterAct);
             MouseLeave = new DelegateCommand(MouseLeaveAct);
+            MouseLeftButtonDown = new DelegateCommand(() => EventMouseLeftButtonDown?.Invoke(this));
+            MouseLeftButtonUp = new DelegateCommand(() => EventMouseLeftButtonUp?.Invoke(this));
         }
     }
 }

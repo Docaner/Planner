@@ -1,8 +1,10 @@
-﻿using Prism.Mvvm;
+﻿using Prism.Commands;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Windows.Input;
 
 namespace Planner.Module.Diagram.Models
 {
@@ -54,7 +56,17 @@ namespace Planner.Module.Diagram.Models
         /// <summary>
         /// Коллекция плавок
         /// </summary>
-        public ObservableCollection<Melting> Meltings { get => _meltings; private set => SetProperty(ref _meltings, value); }
+        public ObservableCollection<Melting> Meltings 
+        { 
+            get => _meltings;
+            private set
+            {
+                if(Meltings != null) Meltings.CollectionChanged -= Meltings_CollectionChanged;
+                SetProperty(ref _meltings, value);
+                Meltings.CollectionChanged += Meltings_CollectionChanged;
+                SubscribeMeltings();
+            }
+        }
         private ObservableCollection<Melting> _meltings;
 
         /// <summary>
@@ -68,8 +80,53 @@ namespace Planner.Module.Diagram.Models
                 melting.Height = melHeight;
         }
 
+        void SubscribeMeltings()
+        {
+            foreach (Melting m in Meltings)
+                SubscribeMelting(m);
+        }
+
+        void SubscribeMelting(Melting m)
+        {
+            m.EventMouseLeftButtonDown += Mouse.SetFocus;
+            m.EventMouseLeftButtonUp += Mouse.RemoveFocus;
+            m.EventMouseLeave += Mouse.RemoveFocus;
+        }
+
+        void UnsubscribeMelting(Melting m)
+        {
+            m.EventMouseLeftButtonDown -= Mouse.SetFocus;
+            m.EventMouseLeftButtonUp -= Mouse.RemoveFocus;
+            m.EventMouseLeave -= Mouse.RemoveFocus;
+        }
+
+        private void Meltings_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if(e.NewItems != null)
+            {
+                foreach (Melting m in e.NewItems)
+                    SubscribeMelting(m);
+            }
+
+            if(e.OldItems != null)
+            {
+                foreach (Melting m in e.OldItems)
+                    UnsubscribeMelting(m);
+            }
+        }
+
+        public MouseMelting Mouse
+        {
+            get => _mouse;
+            set => SetProperty(ref _mouse, value);
+        }
+        private MouseMelting _mouse;
+
+
         public Agregator(string name, ObservableCollection<Melting> meltings)
         {
+            Mouse = new MouseMelting();
+
             Name = name;
             Meltings = meltings;
         }

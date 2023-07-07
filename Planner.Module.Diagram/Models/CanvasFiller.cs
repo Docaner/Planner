@@ -378,7 +378,10 @@ namespace Planner.Module.Diagram.Models
         {
             StartEndLines = new ObservableCollection<CanvasTime>();
             for(int i = 0; i < 2; i++)
-                StartEndLines.Add(new CanvasTime(0, 0, 0, 0, DateTime.Now));
+            {
+                StartEndLines.Add(new CanvasTime());
+
+            }
         }
 
         /// <summary>
@@ -425,7 +428,7 @@ namespace Planner.Module.Diagram.Models
             StartEndLines[1].X1Text = Height - 50;
         }
 
-            private void HideStartEndLines()
+        private void HideStartEndLines()
         {
             foreach(CanvasTime line in StartEndLines)
             {
