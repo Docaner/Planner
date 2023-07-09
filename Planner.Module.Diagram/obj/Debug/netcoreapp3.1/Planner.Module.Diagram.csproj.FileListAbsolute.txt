@@ -238,3 +238,5 @@ E:\Учеба\Практика_Северсталь\Planner\Planner_11\Planner\P
 E:\Учеба\Практика_Северсталь\Planner\Planner_11\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.csproj.CoreCompileInputs.cache
 E:\Учеба\Практика_Северсталь\Planner\Planner_11\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.dll
 E:\Учеба\Практика_Северсталь\Planner\Planner_11\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Planner.Module.Diagram.pdb
+H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Components\WindowAdditionalInfarmation.g.cs
+H:\Planner\Planner\Planner.Module.Diagram\obj\Debug\netcoreapp3.1\Components\WindowAdditionalInfarmation.baml

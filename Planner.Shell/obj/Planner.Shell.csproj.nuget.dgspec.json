@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_11\\Planner\\Planner.Shell\\Planner.Shell.csproj": {}
+    "H:\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj": {}
   },
   "projects": {
-    "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_11\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
+    "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_11\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+        "projectUniqueName": "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
         "projectName": "Planner.Module.Diagram",
-        "projectPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_11\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
-        "packagesPath": "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\",
-        "outputPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_11\\Planner\\Planner.Module.Diagram\\obj\\",
+        "projectPath": "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj",
+        "packagesPath": "C:\\Users\\mao35\\.nuget\\packages\\",
+        "outputPath": "H:\\Planner\\Planner\\Planner.Module.Diagram\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "G:\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Дмитрий Вопиловский\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mao35\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -73,24 +72,24 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_11\\Planner\\Planner.Shell\\Planner.Shell.csproj": {
+    "H:\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_11\\Planner\\Planner.Shell\\Planner.Shell.csproj",
+        "projectUniqueName": "H:\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
         "projectName": "Planner.Shell",
-        "projectPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_11\\Planner\\Planner.Shell\\Planner.Shell.csproj",
-        "packagesPath": "C:\\Users\\Дмитрий Вопиловский\\.nuget\\packages\\",
-        "outputPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_11\\Planner\\Planner.Shell\\obj\\",
+        "projectPath": "H:\\Planner\\Planner\\Planner.Shell\\Planner.Shell.csproj",
+        "packagesPath": "C:\\Users\\mao35\\.nuget\\packages\\",
+        "outputPath": "H:\\Planner\\Planner\\Planner.Shell\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "G:\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Дмитрий Вопиловский\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mao35\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -99,15 +98,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_11\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
-                "projectPath": "E:\\Учеба\\Практика_Северсталь\\Planner\\Planner_11\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj"
+              "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj": {
+                "projectPath": "H:\\Planner\\Planner\\Planner.Module.Diagram\\Planner.Module.Diagram.csproj"
               }
             }
           }
@@ -162,7 +160,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

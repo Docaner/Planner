@@ -53,7 +53,7 @@ namespace Planner.Module.Diagram.Models
             {
                 _end = value;
                 UpdateEndStringFormat();
-                
+                UpdateWidth();
             }
         }
         private DateTime _end;
@@ -68,8 +68,9 @@ namespace Planner.Module.Diagram.Models
         /// </summary>
         public double CanvasLeft { get => _canvasLeft; set {
                 SetProperty(ref _canvasLeft, value);
-                  Start=_settings.ConvertCanvasToTime(value);
-                  End=_settings.ConvertCanvasToTime(Width);
+                TimeSpan a = End - Start;  
+                Start=_settings.ConvertCanvasToTime(value);
+                  End=Start+a;
                     } 
         
         
