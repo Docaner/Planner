@@ -239,6 +239,8 @@ namespace Planner.Module.Diagram.Models
                     mel.EventMouseEnter += DrawLinesToMeltings;
                     mel.EventMouseLeave += LeaveMeltingsLines;
                     mel.EventMouseRightButtonDowm += CreateWindowAddInf;
+                    mel.EventChangeCanvasLeft += DrawLinesToMeltings;
+                    mel.EventChangeCanvasLeft += CreateWindowAddInf;
                 }
             }
         }

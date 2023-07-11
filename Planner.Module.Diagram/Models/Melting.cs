@@ -70,12 +70,16 @@ namespace Planner.Module.Diagram.Models
                 SetProperty(ref _canvasLeft, value);
                 TimeSpan a = End - Start;  
                 Start=_settings.ConvertCanvasToTime(value);
-                  End=Start+a;
-                    } 
-        
-        
+                End=Start+a;
+                EventChangeCanvasLeft?.Invoke(this);
+                } 
         }
         private double _canvasLeft;
+
+        /// <summary>
+        /// Вызывается, когда изменяется CanvasLeft
+        /// </summary>
+        public event Action<Melting> EventChangeCanvasLeft;
 
         public void UpdateCanvasLeft() => CanvasLeft = _settings.ConvertTimeToCanvasLeft(Start);
 
