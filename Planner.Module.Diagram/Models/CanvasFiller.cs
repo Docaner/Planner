@@ -240,7 +240,7 @@ namespace Planner.Module.Diagram.Models
                     mel.EventMouseLeave += LeaveMeltingsLines;
                     mel.EventMouseRightButtonDowm += CreateWindowAddInf;
                     mel.EventChangeCanvasLeft += DrawLinesToMeltings;
-                    mel.EventChangeCanvasLeft += CreateWindowAddInf;
+                    mel.EventChangeCanvasLeft += ChangeWHAddInf;
                 }
             }
         }
@@ -396,6 +396,16 @@ namespace Planner.Module.Diagram.Models
         /// <param name="target"></param>
         public void CreateWindowAddInf(Melting target)
         {
+
+            ChangeWHAddInf(target);
+            Wai.VisibilityWinAddInf(target);
+        }
+        /// <summary>
+        /// Метод, изменяющий координтаты окна доп.информации
+        /// </summary>
+        /// <param name="target"></param>
+        public void ChangeWHAddInf(Melting target)
+        {
             FocusMelting = target;
             int i = NumberMelting(target);
 
@@ -406,8 +416,6 @@ namespace Planner.Module.Diagram.Models
                 case 0: { Wai.HeighthWinAdd = kalkulHeight(target) - Agregators[0].ActualHeight / 10; break; }
                 case 1: { Wai.HeighthWinAdd = Agregators[i].ActualHeight * (i) - Agregators[0].ActualHeight / 2; break; }
             }
-
-            Wai.VisibilityWinAddInf(target);
         }
 
         private void InitStartEndLines()
